@@ -1,1 +1,1 @@
-![Alt txt] ("img/UI.png")
+![Screenshot] (img/UI.png)
