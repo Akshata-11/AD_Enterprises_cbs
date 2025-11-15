@@ -1,0 +1,39 @@
+.section-about {
+  direction: flex;
+  background-color: #f7f6f6ec;
+  padding: 0;
+  margin: 8rem 0;
+  &-support {
+    height: auto;
+    width: 24rem;
+  }
+  &-img {
+    height: auto;
+    width: 32rem;
+  }
+  &-content {
+  }
+}
+.section-about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 72rem;
+  padding: 0 4rem;
+  padding-bottom: 2rem;
+  align-items: start;
+  justify-content: start;
+  color: black;
+
+  &--tag {
+  }
+
+  &--main {
+    font-size: 1.8rem;
+  }
+  &--sub {
+    color: #000;
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+}

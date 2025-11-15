@@ -1,0 +1,25 @@
+{
+  "name": "Nexter",
+  "version": "1.0.0",
+  "description": "Landing page for nexter",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass --watch sass/main.scss:css/style.css",
+    "devserver": "live-server ",
+    "start": "concurrently \"npm run watch:sass\" \"npm run devserver\"",
+    "build:css": "npm run compile:sass && npm run concat:css && npm run prefix:css && npm run compress:css",
+    "compile:sass": "sass sass/main.scss css/style.comp.css --no-source-map",
+    "concat:css": "concat -o css/style.concat.css css/style.comp.css",
+    "prefix:css": "postcss css/style.concat.css --use autoprefixer --no-map -o css/style.prefix.css",
+    "compress:css": "postcss css/style.prefix.css --use cssnano --no-map -o css/style.min.css"
+  },
+  "author": "Jonas",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.69.0",
+    "concurrently": "^8.2.0",
+    "autoprefixer": "^10.4.0",
+    "concat": "^1.0.3",
+    "postcss-cli": "^10.1.0"
+  }
+}

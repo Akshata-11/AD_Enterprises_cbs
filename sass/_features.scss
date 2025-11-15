@@ -1,0 +1,17 @@
+.services {
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2rem;
+
+    align-items: center;
+    justify-items: center;
+  }
+  & {
+    height: 4rem;
+    width: 20rem;
+    background-color: #84c3dece;
+    border-radius: 1rem;
+  }
+}
