@@ -1,1 +1,1 @@
-!alt txt["img/UI.png"]
+!ALT TXT["img/UI.png"]
