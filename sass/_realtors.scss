@@ -2,12 +2,30 @@
   & {
     height: 16rem;
     width: 32rem;
-    border-radius: 2rem;
+    // flex: ;
+    // border-radius: 2rem;
+    flex: 0 0 32rem;
   }
+
   &-container {
     display: flex;
-    gap: 2rem;
+    // gap: 8rem;
     padding: 2rem;
+    overflow-x: auto;
+    width: 90%;
+    overflow: hidden;
+    // border: 1rem solid black;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &-container-anumation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    animation: spin 20s infinite linear;
+    padding-right: 1rem;
   }
 }
 
@@ -18,9 +36,9 @@
   margin-bottom: 3.5rem;
   position: relative;
   overflow: hidden;
-  border-radius: 2rem;
-  border: 2px dashed #6b655ef8;
-  background-color: #cfccc8f8;
+  // border-radius: 2rem;
+  // border: 2px dashed #6b655ef8;
+  background-color: #f2efebf8;
   transition: all 0.2s;
   &__text {
     margin-bottom: 3rem;
@@ -56,19 +74,45 @@
     color: var($color-primary);
     font-size: 2.2rem;
     font-weight: 200;
+    z-index: 10;
   }
   &::before {
-    content: "\201c";
+    content: "\2018";
     position: absolute;
     top: -2.75rem;
     left: -1rem;
     line-height: 1;
     font-size: 20rem;
-    color: $color-grey-light-3;
+    color: #b9b4b45a;
+    font-family: sans-serif;
+    z-index: 1;
+  }
+  &::after {
+    content: "\2019";
+    position: absolute;
+    top: 8.2rem;
+    right: -1rem;
+    line-height: 1;
+    font-size: 20rem;
+    color: #b9b4b45a;
     font-family: sans-serif;
     z-index: 1;
   }
   &:hover {
     transform: rotate(1px);
   }
+}
+
+@keyframes spin {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); // Moves exactly half the total width
+  }
+}
+
+.heading-secondar-align {
+  align-self: flex-start;
+  margin-left: 8rem;
 }

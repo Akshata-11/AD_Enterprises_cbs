@@ -107,8 +107,23 @@ body {
 }
 
 .section-services {
-  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  padding: 12rem 0;
 }
 .section-testimonials {
-  padding: 4rem;
+  // margin: 8rem auto;
+  // width: 92%;
+
+  // width: 1200px; // Fixed width
+  // max-width: 92%; // Responsive fallback
+  // margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  padding: 12rem 0;
+  // justify-content: center;
 }
