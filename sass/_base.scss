@@ -94,16 +94,41 @@ body {
   margin-bottom: 2.4rem;
   justify-content: center;
   text-align: center;
-  border-radius: 1rem;
+  // border-radius: 1rem;
+}
+
+.heading-secondary-u {
+  display: flex;
+  min-height: auto;
+  width: max-content;
+  padding: 1rem;
+  // background: linear-gradient(to right bottom, #e3db80, #eedc1cb4);
+  background: linear-gradient(to right bottom, #fff, #555353);
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 100;
+  align-items: center;
+  margin-bottom: 2.4rem;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Momo Trust Display", sans-serif;
 }
 
 .section-about {
-  padding: 4rem 0;
+  padding: 12rem 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  // background-color: #aaa;
 }
 
 .section-product {
-  padding: 4rem;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .section-services {
@@ -124,6 +149,13 @@ body {
   flex-direction: column;
 
   align-items: center;
-  padding: 12rem 0;
+  padding: 16rem 0;
+  // margin-bottom: 12rem;
   // justify-content: center;
+}
+
+.sub-heading {
+  padding-bottom: 2rem;
+  font-size: 1.4rem;
+  font-weight: 400;
 }

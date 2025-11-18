@@ -71,16 +71,38 @@ body {
   margin-bottom: 2.4rem;
   justify-content: center;
   text-align: center;
-  border-radius: 1rem;
+}
+
+.heading-secondary-u {
+  display: flex;
+  min-height: auto;
+  width: max-content;
+  padding: 1rem;
+  background: linear-gradient(to right bottom, #fff, #555353);
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 100;
+  align-items: center;
+  margin-bottom: 2.4rem;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Momo Trust Display", sans-serif;
 }
 
 .section-about {
-  padding: 4rem 0;
+  padding: 12rem 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .section-product {
-  padding: 4rem;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .section-services {
@@ -94,7 +116,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 12rem 0;
+  padding: 16rem 0;
+}
+
+.sub-heading {
+  padding-bottom: 2rem;
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 
 .navigation {
@@ -182,8 +210,9 @@ body {
 }
 .testimonials-container {
   display: flex;
-  padding: 2rem;
+  padding: 4rem;
   overflow-x: auto;
+  margin-bottom: 4rem;
   width: 90%;
   overflow: hidden;
 }
@@ -197,6 +226,7 @@ body {
   gap: 4rem;
   animation: spin 20s infinite linear;
   padding-right: 1rem;
+  padding-bottom: 2rem;
 }
 
 .review {
@@ -206,11 +236,18 @@ body {
   margin-bottom: 3.5rem;
   position: relative;
   overflow: hidden;
-  background-color: rgba(242, 239, 235, 0.9725490196);
+  border-right: 2px solid #dc4727;
+  border-bottom: 2px solid #dc4727;
+  border-left: 2px solid #efb671;
+  border-top: 2px solid #efb671;
   transition: all 0.2s;
 }
+.review:hover {
+  border-left: 2px solid #dc4727;
+  border-top: 2px solid #dc4727;
+}
 .review__text {
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
   z-index: 10;
   position: relative;
 }
@@ -243,26 +280,16 @@ body {
   z-index: 10;
 }
 .review::before {
-  content: "‘";
+  content: "“";
   position: absolute;
-  top: -2.75rem;
-  left: -1rem;
+  top: -0.2rem;
+  left: 0.4rem;
   line-height: 1;
-  font-size: 20rem;
-  color: rgba(185, 180, 180, 0.3529411765);
-  font-family: sans-serif;
+  font-size: 10rem;
+  color: #aaaaa4;
+  font-family: "Catamaran", sans-serif;
   z-index: 1;
-}
-.review::after {
-  content: "’";
-  position: absolute;
-  top: 8.2rem;
-  right: -1rem;
-  line-height: 1;
-  font-size: 20rem;
-  color: rgba(185, 180, 180, 0.3529411765);
-  font-family: sans-serif;
-  z-index: 1;
+  font-weight: 100;
 }
 .review:hover {
   transform: rotate(1px);
@@ -307,9 +334,11 @@ body {
   padding: 2.2rem;
 }
 .services-details-heading {
-  font-size: 2.8rem;
+  font-size: 1.8rem;
   padding-bottom: 2.2rem;
-  color: #000;
+  font-family: "Momo Trust Display", sans-serif;
+  color: #07171e;
+  font-weight: 300;
 }
 .services-details-para {
   font-size: 1.2rem;
@@ -322,8 +351,7 @@ body {
 
 .section-hero {
   background-color: #fdf2e9;
-  margin-bottom: 2rem;
-  height: 90vh;
+  height: 86vh;
   margin-top: 7rem;
   z-index: 1;
 }
@@ -342,18 +370,19 @@ body {
   font-size: 5.2rem;
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 2rem;
+  margin-bottom: 4.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   background: linear-gradient(to right, rgba(40, 154, 201, 0.42), rgb(40, 154, 201));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: "Momo Trust Display", sans-serif;
 }
 
 .hero-subheading {
   font-size: 2rem;
   font-weight: 400;
-  margin-bottom: 3rem;
+  margin-bottom: 5.2rem;
   opacity: 0.95;
   color: #000;
 }
@@ -543,7 +572,7 @@ body {
   outline: none;
 }
 .footer-connect-form-submit:hover {
-  color: red;
+  color: #dc4727;
 }
 .footer-connect-links {
   display: flex;
@@ -565,7 +594,8 @@ body {
   width: 1.5rem;
 }
 .nav-icon-social:hover {
-  fill: blue;
+  cursor: pointer;
+  fill: rgb(40, 154, 201);
 }
 
 .nav-icon-sub {
@@ -709,8 +739,8 @@ body {
   gap: 4rem;
 }
 .product-category > img {
-  height: 24rem;
-  width: 24rem;
+  height: 18rem;
+  width: 18rem;
   border-right: 2.4px solid black;
   border-bottom: 2.4px solid black;
 }
@@ -745,38 +775,115 @@ body {
   filter: blur(3px) brightness(80%);
 }
 
-.section-about {
-  direction: flex;
-  background-color: rgba(247, 246, 246, 0.9254901961);
-  padding: 0;
-  margin: 8rem 0;
+/********************/
+/*FEATURED-IN SECTION*/
+/********************/
+.section-featured {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5.2rem;
 }
-.section-about-support {
-  height: auto;
-  width: 24rem;
+
+.heading-featured-in {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  color: #888;
 }
+
+.logos {
+  display: flex;
+  gap: 4.8rem;
+  justify-content: space-around;
+}
+
+.logos img {
+  height: 2.8rem;
+  filter: brightness(0);
+  opacity: 40%;
+}
+
+.section-about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .section-about-img {
-  height: auto;
-  width: 32rem;
+  height: 24rem;
+  width: 24rem;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
+
 .section-about-content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  width: 72rem;
-  padding: 0 4rem;
+  height: 24rem;
+  width: 86rem;
+  padding: 2rem 4rem;
   padding-bottom: 2rem;
   align-items: start;
   justify-content: start;
   color: black;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  margin: 0 2rem;
+  border: 0.1px solid rgba(0, 0, 0, 0.0941176471);
 }
 .section-about-content--main {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
 .section-about-content--sub {
   color: #000;
   font-weight: 400;
   font-size: 1.2rem;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.moveInRight {
+  animation-name: moveInRight;
+  animation-duration: 2.4s;
+  animation-timing-function: ease-out;
+}
+
+.moveInLeft {
+  animation-name: moveInLeft;
+  animation-duration: 2.4s;
+  animation-timing-function: ease-out;
+}
+
+.hidden {
+  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

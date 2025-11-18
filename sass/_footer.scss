@@ -64,7 +64,7 @@
         // transform: translateY(2px);
       }
       &:hover {
-        color: red;
+        color: $color-primary1-dark;
       }
     }
   }
@@ -86,8 +86,10 @@
 .nav-icon-social {
   height: 1.5rem;
   width: 1.5rem;
+
   &:hover {
-    fill: blue;
+    cursor: pointer;
+    fill: $color-primary-dark;
   }
 }
 

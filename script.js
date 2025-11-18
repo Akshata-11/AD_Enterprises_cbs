@@ -133,3 +133,29 @@ function bionicReading(text) {
 // Usage
 // const paragraph = document.querySelector(".bionic-text");
 // paragraph.innerHTML = bionicReading(paragraph.textContent);
+const aboutImg = document.querySelector(".section-about-img-fig");
+const aboutContent = document.querySelector(".section-about-content");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        if (entry.target === aboutImg) {
+          entry.target.classList.remove("hidden");
+          entry.target.classList.add("moveInLeft");
+        }
+
+        if (entry.target === aboutContent) {
+          entry.target.classList.remove("hidden");
+          entry.target.classList.add("moveInRight");
+        }
+      }
+    });
+  },
+  {
+    threshold: 0.3, // element should be 30% visible
+  }
+);
+
+observer.observe(aboutImg);
+observer.observe(aboutContent);

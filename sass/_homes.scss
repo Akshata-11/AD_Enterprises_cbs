@@ -1,7 +1,7 @@
 .section-hero {
   background-color: #fdf2e9;
-  margin-bottom: 2rem;
-  height: 90vh;
+  // margin-bottom: 2rem;
+  height: 86vh;
   margin-top: 7rem;
 
   z-index: 1;
@@ -25,7 +25,7 @@
   font-size: 5.2rem;
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 2rem;
+  margin-bottom: 4.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   // color: rgb(0, 0, 0);
@@ -36,12 +36,13 @@
   background: linear-gradient(to right, $color-primary, $color-primary-dark);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: "Momo Trust Display", sans-serif;
 }
 
 .hero-subheading {
   font-size: 2rem;
   font-weight: 400;
-  margin-bottom: 3rem;
+  margin-bottom: 5.2rem;
   opacity: 0.95;
   color: #000;
 }
