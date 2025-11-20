@@ -58,6 +58,7 @@ Paragraph Default : 1.6
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  overflow-x: hidden;
   // padding-top: 7rem;
 }
 
@@ -65,6 +66,7 @@ body {
   font-family: $font-primary;
   color: $color-grey-dark-2;
   font-weight: 600;
+  overflow-x: hidden;
 }
 
 .container {

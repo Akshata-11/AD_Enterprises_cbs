@@ -36,12 +36,14 @@ Paragraph Default : 1.6
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
   color: #6d5d4b;
   font-weight: 600;
+  overflow-x: hidden;
 }
 
 .container {
@@ -154,6 +156,7 @@ body {
   height: 7rem;
   padding: 0 4.8rem;
   color: #101d2c;
+  position: relative;
   background-color: #fff;
 }
 
@@ -222,6 +225,24 @@ body {
   border-color: #054965;
   background-color: rgba(166, 211, 230, 0.281);
   transform: scale(0.9);
+}
+
+/*MOBILE NAVIGATION*/
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name=close-outline] {
+  display: none;
 }
 
 .testimonials {
@@ -424,17 +445,6 @@ body {
   background-color: #dc4727;
 }
 
-@media (max-width: 768px) {
-  .hero-heading {
-    font-size: 3.5rem;
-  }
-  .hero-subheading {
-    font-size: 1.6rem;
-  }
-  .hero-content {
-    padding: 2rem 3rem;
-  }
-}
 /* SLIDER */
 .slider {
   height: 90vh;
@@ -918,6 +928,82 @@ body {
 
 .hidden {
   opacity: 0;
+}
+
+/********************/
+/*BELOW 1344PX (Smaller Desktop)*/
+/********************/
+@media (max-width: 84em) {
+  .slider {
+    height: 74vh;
+  }
+  .section-hero {
+    height: 74vh;
+  }
+}
+/********************/
+/*BELOW 1200PX (Tablet in orientation of landscape)*/
+/********************/
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+  .hero-heading {
+    font-size: 3.5rem;
+  }
+  .hero-subheading {
+    font-size: 1.6rem;
+  }
+  .hero-content {
+    padding: 2rem 3rem;
+  }
+}
+@media (max-width: 69em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 59em) {
+  html {
+    font-size: 40%;
+  }
+  .main_nav {
+    background-color: rgba(255, 255, 255, 0.97);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+  .nav-open .main_nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .nav-open .icon-mobile-nav[name=close-outline] {
+    display: block;
+  }
+  .nav-open .icon-mobile-nav[name=menu-outline] {
+    display: none;
+  }
+  .main_nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+    justify-content: center;
+  }
+  /*Mobile Navigation*/
+  .btn-mobile-nav {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
