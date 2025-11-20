@@ -310,3 +310,15 @@
 // // .footer-link:active {
 // //   color: #555;
 // // }
+.footer-main {
+  display: grid !important;
+  grid-template-columns: repeat(5, 180px) !important;
+  gap: 32px !important;
+  height: auto !important;
+  min-height: 200px !important;
+}
+
+.footer-end {
+  display: flex !important;
+  height: auto !important;
+}

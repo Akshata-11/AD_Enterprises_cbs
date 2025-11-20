@@ -58,6 +58,7 @@ Paragraph Default : 1.6
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  // padding-top: 7rem;
 }
 
 body {
@@ -158,4 +159,24 @@ body {
   padding-bottom: 2rem;
   font-size: 1.4rem;
   font-weight: 400;
+}
+
+// Minimal CSS for active state
+.nav-link {
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+}
+.nav-link.active {
+  font-weight: 700;
+  border-bottom: 2px solid;
+}
+.inc-error {
+  color: #b00;
+  padding: 0.5rem;
+  background: #fee;
+}
+.noscript-warning {
+  background: #ffd;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
 }

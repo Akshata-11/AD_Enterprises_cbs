@@ -28,40 +28,54 @@
 
     <title>AD Enterprises</title>
   </head>
-  <body">
-  <header class="navigation sticky">
-    <img src="img/logo/Logo_AD.png" alt="AD_Enterprises_Logo" class="logo" />
-    <nav class="main_nav">
-      <ul class="main_nav-list">
-        <li class="main-nav-item">
-          <svg class="nav-icon">
-            <use xlink:href="img/svg/sprite.svg#icon-home"></use></svg
-          ><a class="main_nav-link" href="index.html">Home</a>
-        </li>
-        <li class="main-nav-item">
-          <svg class="nav-icon">
-            <use xlink:href="img/svg/sprite.svg#icon-info"></use></svg
-          ><a class="main_nav-link" href="about.html">About</a>
-        </li>
-        <li class="main-nav-item">
-          <svg class="nav-icon">
-            <use xlink:href="img/svg/sprite.svg#icon-shopping-cart"></use></svg
-          ><a class="main_nav-link" href="products.html">Products</a>
-        </li>
-        <li class="main-nav-item">
-          <svg class="nav-icon">
-            <use xlink:href="img/svg/sprite.svg#icon-phone"></use></svg
-          ><a class="main_nav-link" href="contact.html">Contact</a>
-        </li>
-      </ul>
-    </nav>
-    <span
-      ><a class="main_nav-link nav-cta" href="contact.html"
-        ><strong>Connect Here.</strong></a
-      ></span
-    >
-  </header>
-   <footer class="footer">
+  <body>
+    <!-- containers where header & footer will be injected -->
+    <!-- <div id="header" role="banner"></div> -->
+
+    <header class="navigation sticky">
+      <img src="img/logo/Logo_AD.png" alt="AD_Enterprises_Logo" class="logo" />
+      <nav class="main_nav">
+        <ul class="main_nav-list">
+          <li class="main-nav-item">
+            <svg class="nav-icon">
+              <use xlink:href="img/svg/sprite.svg#icon-home"></use></svg
+            ><a class="main_nav-link" href="index.html">Home</a>
+          </li>
+          <li class="main-nav-item">
+            <svg class="nav-icon">
+              <use xlink:href="img/svg/sprite.svg#icon-info"></use></svg
+            ><a class="main_nav-link" href="about.html">About</a>
+          </li>
+          <li class="main-nav-item">
+            <svg class="nav-icon">
+              <use
+                xlink:href="img/svg/sprite.svg#icon-shopping-cart"
+              ></use></svg
+            ><a class="main_nav-link" href="products.html">Products</a>
+          </li>
+          <li class="main-nav-item">
+            <svg class="nav-icon">
+              <use xlink:href="img/svg/sprite.svg#icon-phone"></use></svg
+            ><a class="main_nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <span
+        ><a class="main_nav-link nav-cta" href="contact.html"
+          ><strong>Connect Here.</strong></a
+        ></span
+      >
+    </header>
+
+    <!-- <div id="footer" role="contentinfo"></div> -->
+
+    <!-- JS loader -->
+    <!-- <script src="script.js"></script> -->
+    <!-- <script src="js/include.js" defer></script> -->
+
+    <!-- noscript fallback if user has JS disabled -->
+
+    <footer class="footer">
 
 
 
@@ -183,8 +197,11 @@
     </div>
 
   </footer>
-  <script src="script.js"></script>
+    <noscript>
+      <div class="noscript-warning">
+        JavaScript is required to load the site header & footer. Please enable
+        JavaScript or use a server-side include.
+      </div>
+    </noscript>
   </body>
-
-
 </html>

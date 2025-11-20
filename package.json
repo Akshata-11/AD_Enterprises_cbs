@@ -1,7 +1,7 @@
 {
-  "name": "Nexter",
+  "name": "AD Enterprises",
   "version": "1.0.0",
-  "description": "Landing page for nexter",
+  "description": "Landing page for AD Enterprises",
   "main": "index.js",
   "scripts": {
     "watch:sass": "sass --watch sass/main.scss:css/style.css",

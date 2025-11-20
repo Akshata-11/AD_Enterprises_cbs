@@ -125,6 +125,28 @@ body {
   font-weight: 400;
 }
 
+.nav-link {
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+}
+
+.nav-link.active {
+  font-weight: 700;
+  border-bottom: 2px solid;
+}
+
+.inc-error {
+  color: #b00;
+  padding: 0.5rem;
+  background: #fee;
+}
+
+.noscript-warning {
+  background: #ffd;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -138,7 +160,6 @@ body {
 .sticky {
   position: fixed;
   top: 0;
-  bottom: 0;
   width: 100%;
   height: 7rem;
   padding-top: 0;
@@ -721,6 +742,19 @@ body {
   height: 2rem;
   width: 4rem;
   background-color: #000;
+}
+
+.footer-main {
+  display: grid !important;
+  grid-template-columns: repeat(5, 180px) !important;
+  gap: 32px !important;
+  height: auto !important;
+  min-height: 200px !important;
+}
+
+.footer-end {
+  display: flex !important;
+  height: auto !important;
 }
 
 .section-product-heading {
