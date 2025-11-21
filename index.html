@@ -20,7 +20,7 @@
   <title>AD Enterprises</title>
 </head>
 <body>
-  <header class="navigation sticky nav-open">
+  <header class="navigation sticky ">
     <img src="img/logo/Logo_AD.png" alt="AD_Enterprises_Logo" class="logo" />
     <nav class="main_nav">
       <ul class="main_nav-list">
@@ -36,7 +36,7 @@
         <li class="main-nav-item"><svg class="nav-icon">
             <use xlink:href="img/svg/sprite.svg#icon-phone"></use>
           </svg><a class="main_nav-link" href="contact.html">Contact</a></li>
-<li><span><a class="main_nav-link nav-cta" href="contact.html"><strong>Connect Here.</strong></a></span></li>
+<li class="main-nav-item"><span><a class="main_nav-link nav-cta" href="contact.html"><strong>Connect Here.</strong></a></span></li>
       </ul>
 
     </nav>
@@ -361,8 +361,8 @@
 
     <div class="footer-connect">
       <div class="footer-connect-form">
-        <span>For Discount Connect Here</span>
-        <form action="#"><input type="text" name="footer-connect-form-input" id="footer-connect-form"
+        <span class="footer-connect-form-discount">For Discount Connect Here</span>
+        <form class="footer-form"  action="#"><input type="text" name="footer-connect-form-input" id="footer-connect-form"
             placeholder="Enter your email ..." class="footer-connect-form-input">
           <button class="footer-connect-form-submit" type="submit">Subscribe <svg class="nav-icon-sub">
               <use xlink:href="img/svg/sprite.svg#icon-arrow-long-right"></use>
@@ -370,7 +370,7 @@
         </form>
       </div>
       <div class="footer-connect-links">
-        <span>On Social Media</span>
+        <span class="footer-connect-links-social">On Social Media</span>
         <span class="footer-connect-links-icons"><svg class="nav-icon-social">
             <use xlink:href="img/svg/sprite.svg#icon-facebook"></use>
           </svg>
@@ -391,12 +391,12 @@
 
 
     <div class="footer-main">
-      <div><a href="#" class="footer-logo">
+      <div class="footer-logo"><a href="#" >
           <img class="footer-logo" alt="Omnifood logo" src="img/logo/Logo_AD.png" /></a></div>
       <div class="heading">CATEGORIES</div>
       <div class="heading">CUSTOMER</div>
       <div class="heading">COMPANY</div>
-      <div class="heading">Follow us on Instagram</div>
+      <div class="heading hide">Follow us on Instagram</div>
       <div class="heading-foot">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, perspiciatis magni? Nam
         illo odit</div>
       <div>
@@ -458,20 +458,38 @@
         <div class="image-container"><img src="img/hero/Hero_1-.jpg" alt="Hero_1" class="footer-main-img">
           <div class="overlay"><svg class="nav-icon-social-overlay">
               <use xlink:href="img/svg/sprite.svg#icon-instagram1"></use>
-            </svg></div>
+            </svg>
+          </div>
         </div>
-        <div class="footer-main-img-insta-icon"><svg class="nav-icon-social">
+        <div class="image-container"><img src="img/hero/Hero_1-.jpg" alt="Hero_1" class="footer-main-img">
+          <div class="overlay"><svg class="nav-icon-social-overlay">
+              <use xlink:href="img/svg/sprite.svg#icon-instagram1"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="image-container"><img src="img/hero/Hero_1-.jpg" alt="Hero_1" class="footer-main-img">
+          <div class="overlay"><svg class="nav-icon-social-overlay">
+              <use xlink:href="img/svg/sprite.svg#icon-instagram1"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="footer-main-img-insta-icon">
+          <svg class="nav-icon-social">
             <use xlink:href="img/svg/sprite.svg#icon-instagram1"></use>
+            </svg>
         </div>
       </div>
     </div>
-    <div class="footer-end"><span>© 2025 AD Enterprises</span>
+    <div class="footer-end"><span class="footer-end-copyright">© 2025 AD Enterprises</span>
       <div class="footer-end-cards">
-        <div><img src="img/product_category/70535-credit-vector-card-mastercard-logo-free-frame.png" alt="Hero_1"
-            class="footer-main-img"></div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
+        <div><img src="img/cards/american-express-card.png" alt="Hero_1"
+            class="footer-end-img"></div>
+        <div><img src="img/cards/master-card.png" alt="Hero_1"
+            class="footer-end-img"></div>
+        <div><img src="img/cards/paypal.jpg" alt="Hero_1"
+            class="footer-end-img"></div>
+        <div><img src="img/cards/Visa-Card.png" alt="Hero_1"
+            class="footer-end-img"></div>
       </div>
     </div>
 

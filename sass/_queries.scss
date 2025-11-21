@@ -15,24 +15,6 @@
 
     height: 74vh;
   }
-
-  //   .section-hero {
-  //     //   background-color: #fdf2e9;/
-  //     // margin-bottom: 2rem;
-
-  //     height: 74vh;
-  //   }
-  //   .hero-heading {
-  //     font-size: 3.5rem;
-  //   }
-
-  //   .hero-subheading {
-  //     font-size: 1.6rem;
-  //   }
-
-  //   .hero-content {
-  //     padding: 2rem 3rem;
-  //   }
 }
 
 /********************/
@@ -61,6 +43,7 @@
     font-size: 50%;
   }
 }
+
 @media (max-width: 59em) {
   html {
     font-size: 40%;
@@ -109,5 +92,55 @@
   /*Mobile Navigation*/
   .btn-mobile-nav {
     display: block;
+  }
+  .footer-connect {
+    padding: 0rem 16rem;
+    justify-content: start;
+    height: 60px;
+    gap: 20px;
+    &-form {
+      gap: 1rem;
+      flex: 0 0 50%;
+      &-input {
+        width: 62rem;
+        font-size: 1.2rem;
+      }
+      &-submit {
+        font-size: 1.2rem;
+      }
+      &-discount {
+        display: none;
+      }
+    }
+    &-links-social {
+      display: none;
+    }
+  }
+  .footer-main {
+    padding: 0rem 16rem;
+    grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: repeat(4, 1fr);
+
+    &-img-grid {
+      // display: grid;
+      // grid-template-columns: repeat(6, 1fr);
+      grid-column: 1/-1;
+      // grid-row: 3 / span(1);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      & > div {
+        height: 12rem;
+        width: 12rem;
+      }
+    }
+  }
+  .hide {
+    display: none;
+  }
+
+  .footer-end {
+    padding: 0rem 16rem;
   }
 }
