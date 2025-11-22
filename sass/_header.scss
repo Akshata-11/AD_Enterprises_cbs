@@ -56,9 +56,10 @@
   border-bottom: 0.4px solid transparent;
   font-weight: 300;
   transition: all 0.4s;
+  margin-left: 32rem;
   &:hover {
     transform: translateY(1);
-    // border-bottom: 0.5px solid $button;
+    border-bottom: 0.5px solid $button;
   }
 }
 
@@ -78,7 +79,7 @@
   border-radius: 10px;
   transition: all 0.5s;
   // border: 0.01rem solid transparent;
-  &:hover {
+  &:not(:last-child):hover {
     border-color: #054965;
     background-color: rgba(166, 211, 230, 0.281);
     transform: scale(0.9);

@@ -66,7 +66,18 @@ body {
   font-family: $font-primary;
   color: $color-grey-dark-2;
   font-weight: 600;
+  background-image: url("/img/logo/Logo_AD.png");
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(#fff, 0.9),
+      rgba(#f1f3f5, 0.96)
+    ),
+    url("/img/logo/Logo_AD.png");
+  background-position: center;
+  background-size: 220rem;
+  background-repeat: no-repeat;
   // overflow-x: hidden;
+  // z-index: -1111;
 }
 
 .container {

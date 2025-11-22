@@ -42,6 +42,11 @@ body {
   font-family: "Montserrat", sans-serif;
   color: #6d5d4b;
   font-weight: 600;
+  background-image: url("/img/logo/Logo_AD.png");
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(241, 243, 245, 0.96)), url("/img/logo/Logo_AD.png");
+  background-position: center;
+  background-size: 220rem;
+  background-repeat: no-repeat;
 }
 
 .container {
@@ -196,10 +201,12 @@ body {
   border-bottom: 0.4px solid transparent;
   font-weight: 300;
   transition: all 0.4s;
+  margin-left: 32rem;
 }
 .nav-cta:link:hover,
 .nav-cta:visited:hover {
   transform: translateY(1);
+  border-bottom: 0.5px solid #054965;
 }
 
 .nav-icon {
@@ -218,7 +225,7 @@ body {
   border-radius: 10px;
   transition: all 0.5s;
 }
-.main-nav-item:hover {
+.main-nav-item:not(:last-child):hover {
   border-color: #054965;
   background-color: rgba(166, 211, 230, 0.281);
   transform: scale(0.9);
