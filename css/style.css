@@ -282,6 +282,7 @@ body {
   margin-bottom: 3.5rem;
   position: relative;
   overflow: hidden;
+  border-radius: 1rem;
   border-right: 2px solid #dc4727;
   border-bottom: 2px solid #dc4727;
   border-left: 2px solid #efb671;
@@ -367,6 +368,7 @@ body {
 .services:hover {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transform: translateY(-0.5px);
+  transform: translateY(-0.1rem) scale(1);
 }
 .services-img-fig {
   object-fit: contain;
@@ -559,8 +561,8 @@ body {
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
-  background: linear-gradient(to right, rgb(120, 190, 220), rgb(16, 111, 152));
-  color: #07171e;
+  background: linear-gradient(to right, rgba(198, 214, 222, 0.959), rgb(69, 139, 169));
+  color: rgba(7, 23, 30, 0.0666666667);
 }
 
 .footer-form {
@@ -576,9 +578,10 @@ body {
   justify-content: space-between; /* center the inner box horizontally */
   align-items: center;
   gap: 22rem;
-  padding: 8rem 20rem;
+  padding: 4rem 20rem;
   padding-top: 4rem;
   font-size: 1.4rem;
+  border-bottom: 0.1rem solid rgba(236, 232, 232, 0.3294117647);
 }
 .footer-connect-form {
   display: flex;
@@ -601,13 +604,13 @@ body {
 }
 .footer-connect-form > span {
   text-transform: uppercase;
-  color: #07171e;
+  color: rgba(7, 23, 30, 0.5176470588);
   font-size: 1.4rem;
   width: 24rem;
 }
 .footer-connect-form-submit {
   font-family: inherit;
-  color: inherit;
+  color: rgba(7, 23, 30, 0.5176470588);
   border: none;
   padding: 0.7rem 2rem;
   align-items: center;
@@ -629,7 +632,7 @@ body {
 }
 .footer-connect-links > span {
   text-transform: uppercase;
-  color: #07171e;
+  color: rgba(7, 23, 30, 0.5176470588);
   font-size: 1.4rem;
 }
 .footer-connect-links-icons {
@@ -647,7 +650,7 @@ body {
 }
 .nav-icon-social:hover {
   cursor: pointer;
-  fill: #dc4727;
+  fill: rgba(7, 23, 30, 0.5176470588);
   transform: scale(1);
 }
 
@@ -669,13 +672,13 @@ body {
   grid-column-gap: 1rem;
   padding: 4rem 20rem;
   grid-row-gap: 1rem;
-  color: #07171e;
+  color: rgba(7, 23, 30, 0.5176470588);
 }
 .footer-main > div {
   align-items: center;
   justify-self: self-center;
   align-self: self-start;
-  color: #07171e;
+  color: rgba(7, 23, 30, 0.5843137255);
   align-items: center;
 }
 .footer-main-img-grid {
@@ -706,8 +709,11 @@ body {
 
 .nav-icon-social-overlay {
   fill: rgba(255, 255, 255, 0.5725490196);
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 2.4rem;
+  width: 2.4rem;
+  position: absolute;
+  top: 2.4rem;
+  left: 2.4rem;
 }
 
 .image-container {
@@ -757,7 +763,7 @@ body {
 .footer-link {
   text-decoration: none;
   font-size: 1.2rem;
-  color: #07171e;
+  color: rgba(7, 23, 30, 0.5176470588);
 }
 
 /******************/
@@ -769,10 +775,11 @@ body {
   justify-content: space-between;
   padding: 0rem 20rem;
   align-items: center;
+  background-color: rgba(69, 139, 169, 0.189);
 }
 .footer-end-copyright {
   font-size: 1.4rem;
-  color: #07171e;
+  color: rgba(7, 23, 30, 0.5176470588);
 }
 .footer-end-cards {
   padding-right: 1rem;
