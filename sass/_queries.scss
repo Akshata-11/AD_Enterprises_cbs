@@ -36,13 +36,27 @@
   .hero-content {
     padding: 2rem 3rem;
   }
+
+  .footer-connect {
+    gap: 8rem;
+  }
+  body {
+    background-size: 180rem;
+  }
 }
+/********************/
+/*BELOW 1100PX (Tablet in orientation of landscape)*/
+/********************/
 
 @media (max-width: 69em) {
   html {
     font-size: 50%;
   }
 }
+
+/********************/
+/*BELOW 944PX (Tablet in orientation of landscape)*/
+/********************/
 
 @media (max-width: 59em) {
   html {
@@ -101,6 +115,7 @@
     &-form {
       gap: 1rem;
       flex: 0 0 50%;
+      padding-right: 8rem;
       &-input {
         width: 62rem;
         font-size: 1.2rem;
@@ -115,11 +130,19 @@
     &-links-social {
       display: none;
     }
+    &-links-icons {
+      gap: 2.8rem;
+    }
+  }
+  .nav-icon-social {
+    height: 2.4rem;
+    width: 2.4rem;
   }
   .footer-main {
-    padding: 0rem 16rem;
+    padding: 4rem 16rem;
     grid-template-columns: repeat(4, 1fr);
     // grid-template-rows: repeat(4, 1fr);
+    gap: 2rem;
 
     &-img-grid {
       // display: grid;

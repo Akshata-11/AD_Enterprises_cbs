@@ -984,12 +984,24 @@ body {
   .hero-content {
     padding: 2rem 3rem;
   }
+  .footer-connect {
+    gap: 8rem;
+  }
+  body {
+    background-size: 180rem;
+  }
 }
+/********************/
+/*BELOW 1100PX (Tablet in orientation of landscape)*/
+/********************/
 @media (max-width: 69em) {
   html {
     font-size: 50%;
   }
 }
+/********************/
+/*BELOW 944PX (Tablet in orientation of landscape)*/
+/********************/
 @media (max-width: 59em) {
   html {
     font-size: 40%;
@@ -1040,6 +1052,7 @@ body {
   .footer-connect-form {
     gap: 1rem;
     flex: 0 0 50%;
+    padding-right: 8rem;
   }
   .footer-connect-form-input {
     width: 62rem;
@@ -1054,9 +1067,17 @@ body {
   .footer-connect-links-social {
     display: none;
   }
+  .footer-connect-links-icons {
+    gap: 2.8rem;
+  }
+  .nav-icon-social {
+    height: 2.4rem;
+    width: 2.4rem;
+  }
   .footer-main {
-    padding: 0rem 16rem;
+    padding: 4rem 16rem;
     grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
   }
   .footer-main-img-grid {
     grid-column: 1/-1;
