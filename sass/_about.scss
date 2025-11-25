@@ -85,10 +85,14 @@
   // $color-primary-dark
   // );
   &--tag {
+    font-family: "Momo Trust Display", sans-serif;
+    // letter-spacing: 0.1rem;
+    font-weight: 300;
   }
 
   &--main {
     font-size: 1.4rem;
+    font-weight: 400;
   }
   &--sub {
     color: #000;
