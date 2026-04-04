@@ -3,28 +3,28 @@
 /********************/
 
 @media (max-width: 84em) {
-}
-// Responsive adjustments
-@media (max-width: 84em) {
   .slider {
-    height: 74vh;
+    height: min(90vh, 74rem);
   }
-  .section-hero {
-    //   background-color: #fdf2e9;/
-    // margin-bottom: 2rem;
 
-    height: 74vh;
+  .section-hero {
+    height: min(86vh, 74rem);
+  }
+
+  .slide {
+    height: min(90vh, 74rem);
   }
 }
 
 /********************/
-/*BELOW 1200PX (Tablet in orientation of landscape)*/
+/*BELOW 1200PX (Landscape tablet)*/
 /********************/
 
 @media (max-width: 75em) {
   html {
     font-size: 56.25%;
   }
+
   .hero-heading {
     font-size: 3.5rem;
   }
@@ -38,49 +38,69 @@
   }
 
   .footer-connect {
-    gap: 8rem;
+    gap: clamp(4rem, 8vw, 8rem);
+    padding-left: clamp(3rem, 8vw, 12rem);
+    padding-right: clamp(3rem, 8vw, 12rem);
   }
+
+  .footer-main,
+  .footer-end {
+    padding-left: clamp(3rem, 8vw, 12rem);
+    padding-right: clamp(3rem, 8vw, 12rem);
+  }
+
   body {
-    background-size: 180rem;
+    background-size: min(180rem, 220%);
   }
 }
+
 /********************/
-/*BELOW 1100PX (Tablet in orientation of landscape)*/
+/*BELOW 1100PX*/
 /********************/
 
 @media (max-width: 69em) {
   html {
     font-size: 50%;
   }
+
+  .section-about,
+  .section-services,
+  .section-testimonials {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
 }
 
 /********************/
-/*BELOW 944PX (Tablet in orientation of landscape)*/
+/*BELOW 944PX (Tablet / mobile nav)*/
 /********************/
 
 @media (max-width: 59em) {
   html {
-    font-size: 40%;
+    font-size: 50%;
   }
+
+  body.nav-open {
+    overflow: hidden;
+  }
+
   .main_nav {
-    background-color: rgb(255, 255, 255, 0.97);
-    position: absolute;
+    background-color: rgba(255, 255, 255, 0.97);
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     transform: translateX(100%);
-
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.2s ease-in;
-
+    transition: transform 0.25s ease-in, opacity 0.25s ease-in,
+      visibility 0.25s;
     opacity: 0;
-
     pointer-events: none;
-
     visibility: hidden;
+    z-index: 1000;
   }
 
   .nav-open .main_nav {
@@ -102,68 +122,188 @@
     flex-direction: column;
     gap: 4.8rem;
     justify-content: center;
+    align-items: center;
   }
-  /*Mobile Navigation*/
+
+  .nav-cta:link,
+  .nav-cta:visited {
+    margin-left: 0;
+  }
+
   .btn-mobile-nav {
     display: block;
   }
+
+  .navigation {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+
+  .logo {
+    height: 6rem;
+  }
+
   .footer-connect {
-    padding: 0rem 16rem;
-    justify-content: start;
-    height: 60px;
-    gap: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    height: auto;
+    min-height: 6rem;
+    gap: 2.4rem;
+    padding: 3.2rem clamp(2rem, 5vw, 4rem);
+
+    &-promo {
+      text-align: center;
+    }
+
     &-form {
-      gap: 1rem;
-      flex: 0 0 50%;
-      padding-right: 8rem;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 1.2rem;
+      flex: 1 1 auto;
+      width: 100%;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding-right: 0;
+
       &-input {
-        width: 62rem;
-        font-size: 1.2rem;
+        width: 100%;
+        max-width: none;
+        margin-right: 0;
+        box-sizing: border-box;
       }
+
       &-submit {
-        font-size: 1.2rem;
-      }
-      &-discount {
-        display: none;
+        justify-content: center;
       }
     }
+
+    &-links {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
     &-links-social {
-      display: none;
+      display: block;
+      text-align: center;
     }
+
     &-links-icons {
       gap: 2.8rem;
+      justify-content: center;
     }
   }
+
+  .footer-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    width: 100%;
+  }
+
   .nav-icon-social {
     height: 2.4rem;
     width: 2.4rem;
   }
-  .footer-main {
-    padding: 4rem 16rem;
-    grid-template-columns: repeat(4, 1fr);
-    // grid-template-rows: repeat(4, 1fr);
-    gap: 2rem;
 
-    &-img-grid {
-      // display: grid;
-      // grid-template-columns: repeat(6, 1fr);
-      grid-column: 1/-1;
-      // grid-row: 3 / span(1);
-      padding-top: 2rem;
-      display: flex;
-      justify-content: space-between;
-      gap: 2rem;
-      & > div {
-        height: 12rem;
-        width: 12rem;
-      }
-    }
+  .footer-main {
+    padding-left: clamp(2rem, 5vw, 4rem);
+    padding-right: clamp(2rem, 5vw, 4rem);
   }
+
   .hide {
     display: none;
   }
 
   .footer-end {
-    padding: 0rem 16rem;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    height: auto;
+    min-height: 6rem;
+    padding: 2rem clamp(2rem, 5vw, 4rem);
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/********************/
+/*BELOW 704PX (Phones)*/
+/********************/
+
+@media (max-width: 44em) {
+  .section-hero {
+    margin-top: 7rem;
+    height: min(70vh, 52rem);
+  }
+
+  .slider {
+    height: min(70vh, 52rem);
+  }
+
+  .slide {
+    height: min(70vh, 52rem);
+  }
+
+  .hero-content {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: min(52rem, 92vw);
+    padding: 2rem 1.6rem;
+  }
+
+  .hero-heading {
+    font-size: clamp(2.8rem, 8vw, 4rem);
+    margin-bottom: 2.4rem;
+  }
+
+  .hero-subheading {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .btn-hero {
+    padding: 1.2rem 2.4rem;
+    font-size: 1.6rem;
+  }
+
+  .slider__btn--left {
+    left: 1.2rem;
+    transform: translate(0, -50%);
+  }
+
+  .slider__btn--right {
+    right: 1.2rem;
+    transform: translate(0, -50%);
+  }
+
+  .section-about-content {
+    padding: 2rem 2rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .footer-nav {
+    padding: 0;
+  }
+
+  .heading-secondar-align {
+    margin-left: 0;
+    align-self: center;
+  }
+}
+
+/********************/
+/*BELOW 400PX*/
+/********************/
+
+@media (max-width: 25em) {
+  .navigation {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+
+  .logo {
+    height: 5rem;
   }
 }

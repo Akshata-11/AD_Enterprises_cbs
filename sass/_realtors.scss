@@ -1,20 +1,21 @@
 .testimonials {
   & {
-    height: 16rem;
-    width: 32rem;
-    // flex: ;
-    // border-radius: 2rem;
-    flex: 0 0 32rem;
+    min-height: 16rem;
+    height: auto;
+    width: 100%;
+    max-width: 32rem;
+    flex: 0 0 min(32rem, 85vw);
   }
 
   &-container {
     display: flex;
-    // gap: 8rem;
-    padding: 4rem;
+    padding: 2rem clamp(1rem, 4vw, 4rem);
     overflow-x: auto;
     margin-bottom: 4rem;
-    width: 90%;
+    width: 100%;
+    max-width: 100%;
     overflow: hidden;
+    box-sizing: border-box;
     // border: 1rem solid black;
     &::-webkit-scrollbar {
       display: none;
@@ -22,12 +23,28 @@
   }
   &-container-anumation {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
-    gap: 4rem;
-    animation: spin 20s infinite linear;
+    gap: clamp(1.6rem, 4vw, 4rem);
+    animation: spin 48s linear infinite;
+    will-change: transform;
     padding-right: 1rem;
     padding-bottom: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonials-container-anumation {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 44em) {
+  .testimonials {
+    flex: 0 0 min(28rem, 88vw);
+    max-width: min(28rem, 88vw);
   }
 }
 
@@ -116,10 +133,10 @@
 
 @keyframes spin {
   0% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translateX(-50%); // Moves exactly half the total width
+    transform: translate3d(-50%, 0, 0);
   }
 }
 

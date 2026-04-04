@@ -38,25 +38,45 @@
 
 .logos {
   display: flex;
-  gap: 4.8rem;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2.4rem 4.8rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.6rem;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .logos img {
-  height: 2.8rem;
+  display: block;
+  height: auto;
+  max-height: 3.2rem;
+  width: auto;
+  max-width: min(16rem, 32vw);
+  object-fit: contain;
+  object-position: center;
+  flex-shrink: 0;
   filter: brightness(0);
   opacity: 40%;
 }
 .section-about-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 2.4rem;
+  padding: 0 2rem;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .section-about {
   &-img {
-    height: 24rem;
-    width: 24rem;
+    height: auto;
+    width: 100%;
+    max-width: 24rem;
+    aspect-ratio: 1;
+    object-fit: cover;
     // border-radius: 1rem;
     box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -67,8 +87,10 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  height: 24rem;
-  width: 86rem;
+  min-height: auto;
+  height: auto;
+  width: 100%;
+  max-width: 86rem;
   padding: 2rem 4rem;
   padding-bottom: 2rem;
   align-items: start;
@@ -104,40 +126,45 @@
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
-  }
-  80% {
-    transform: translateX(10px);
+    transform: translate3d(-2.4rem, 0, 0);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
-  }
-  80% {
-    transform: translateX(-10px);
+    transform: translate3d(2.4rem, 0, 0);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 .moveInRight {
   animation-name: moveInRight;
-  animation-duration: 2.4s;
-  animation-timing-function: ease-out;
+  animation-duration: 0.9s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: both;
 }
 .moveInLeft {
   animation-name: moveInLeft;
-  animation-duration: 2.4s;
-  animation-timing-function: ease-out;
+  animation-duration: 0.9s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .moveInLeft,
+  .moveInRight {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .hidden {

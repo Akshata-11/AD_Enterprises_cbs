@@ -22,8 +22,23 @@
 
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
 }
+.logo-link {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  text-decoration: none;
+}
+
 .logo {
   height: 8rem;
+  width: auto;
+  display: block;
+}
+
+.main_nav-link.nav-link--active:link,
+.main_nav-link.nav-link--active:visited {
+  color: $button;
+  font-weight: 600;
 }
 
 .main_nav {
@@ -56,7 +71,7 @@
   border-bottom: 0.4px solid transparent;
   font-weight: 300;
   transition: all 0.4s;
-  margin-left: 32rem;
+  margin-left: clamp(1.6rem, 12vw, 28rem);
   &:hover {
     transform: translateY(1);
     border-bottom: 0.5px solid $button;
@@ -94,6 +109,8 @@
   background: none;
   cursor: pointer;
   display: none;
+  z-index: 1002;
+  position: relative;
 }
 .icon-mobile-nav {
   height: 4.8rem;

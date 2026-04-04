@@ -1,13 +1,18 @@
 .services {
   &-container {
     display: flex;
-    // flex-direction: row;
-    // flex-wrap: nowrap;
-    gap: 10rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(3rem, 6vw, 10rem);
+    padding: 0 2rem;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   & {
-    height: 48rem;
-    width: 32rem;
+    height: auto;
+    min-height: 42rem;
+    width: 100%;
+    max-width: 32rem;
     // background-color: #84c3dece;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 
