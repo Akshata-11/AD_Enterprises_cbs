@@ -1,563 +1,523 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preload" as="image" href="img/hero/Hero_1.jpg" />
+    <link rel="preload" as="image" href="img/hero/Hero_2.jpg" />
+    <link rel="preload" as="image" href="img/hero/Hero_3.jpg" />
+    <link rel="preload" as="image" href="img/hero/Hero_4.jpg" />
+    <link rel="shortcut icon" type="image/png" href="img/logo/Logo_AD.png" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <title>AD Enterprises</title>
+  </head>
+  <body>
+    <header class="navigation sticky">
+      <a href="#hero" class="logo-link" aria-label="AD Enterprises — home">
+        <img
+          src="img/logo/Logo_AD.png"
+          alt="AD Enterprises"
+          class="logo"
+          width="120"
+          height="96"
+          fetchpriority="high"
+          decoding="async"
+        />
+      </a>
+      <nav class="main_nav" aria-label="Primary">
+        <ul class="main_nav-list">
+          <li class="main-nav-item">
+            <svg class="nav-icon" aria-hidden="true">
+              <use xlink:href="img/svg/sprite.svg#icon-home"></use>
+            </svg>
+            <a class="main_nav-link" href="#hero">Home</a>
+          </li>
+          <li class="main-nav-item">
+            <svg class="nav-icon" aria-hidden="true">
+              <use xlink:href="img/svg/sprite.svg#icon-info"></use>
+            </svg>
+            <a class="main_nav-link" href="#about">About</a>
+          </li>
+          <li class="main-nav-item">
+            <svg class="nav-icon" aria-hidden="true">
+              <use xlink:href="img/svg/sprite.svg#icon-shopping-cart"></use>
+            </svg>
+            <a class="main_nav-link" href="#products">Products</a>
+          </li>
+          <li class="main-nav-item">
+            <svg class="nav-icon" aria-hidden="true">
+              <use xlink:href="img/svg/sprite.svg#icon-earth"></use>
+            </svg>
+            <a class="main_nav-link" href="#services">Services</a>
+          </li>
+          <li class="main-nav-item">
+            <svg class="nav-icon" aria-hidden="true">
+              <use xlink:href="img/svg/sprite.svg#icon-phone"></use>
+            </svg>
+            <a class="main_nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="main-nav-item">
+            <span
+              ><a class="main_nav-link nav-cta" href="#contact"
+                ><strong>Connect Here.</strong></a
+              ></span
+            >
+          </li>
+        </ul>
+      </nav>
+      <button
+        class="btn-mobile-nav"
+        type="button"
+        aria-label="Open navigation menu"
+      >
+        <ion-icon name="menu-outline" class="icon-mobile-nav"></ion-icon>
+        <ion-icon name="close-outline" class="icon-mobile-nav"></ion-icon>
+      </button>
+    </header>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="preload" as="image" href="img/hero/Hero_1.jpg" />
-  <link rel="preload" as="image" href="img/hero/Hero_2.jpg" />
-  <link rel="preload" as="image" href="img/hero/Hero_3.jpg" />
-  <link rel="preload" as="image" href="img/hero/Hero_4.jpg" />
-  <link rel="shortcut icon" type="image/png" href="img/logo/Logo_AD.png" />
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <title>AD Enterprises</title>
-</head>
-<body>
-  <header class="navigation sticky ">
-    <a href="#hero" class="logo-link" aria-label="AD Enterprises — home">
-      <img src="img/logo/Logo_AD.png" alt="AD Enterprises" class="logo" width="120" height="96" fetchpriority="high"
-        decoding="async" />
-    </a>
-    <nav class="main_nav" aria-label="Primary">
-      <ul class="main_nav-list">
-        <li class="main-nav-item"><svg class="nav-icon" aria-hidden="true">
-            <use xlink:href="img/svg/sprite.svg#icon-home"></use>
-          </svg><a class="main_nav-link" href="#hero">Home</a></li>
-        <li class="main-nav-item"><svg class="nav-icon" aria-hidden="true">
-            <use xlink:href="img/svg/sprite.svg#icon-info"></use>
-          </svg><a class="main_nav-link" href="#about">About</a></li>
-        <li class="main-nav-item"><svg class="nav-icon" aria-hidden="true">
-            <use xlink:href="img/svg/sprite.svg#icon-shopping-cart"></use>
-          </svg><a class="main_nav-link" href="#products">Products</a></li>
-        <li class="main-nav-item"><svg class="nav-icon" aria-hidden="true">
-            <use xlink:href="img/svg/sprite.svg#icon-phone"></use>
-          </svg><a class="main_nav-link" href="#contact">Contact</a></li>
-<li class="main-nav-item"><span><a class="main_nav-link nav-cta" href="#contact"><strong>Connect Here.</strong></a></span></li>
-      </ul>
-
-    </nav>
-    
-  
-  <button class="btn-mobile-nav" type="button" aria-label="Open navigation menu">
-    <ion-icon name="menu-outline" class="icon-mobile-nav"></ion-icon> 
-    <ion-icon name="close-outline" class="icon-mobile-nav"></ion-icon>
-  </button>
-  </header>
-
-
-
-  <main>
-
-    <section class="section-hero" id="hero">
-
-      <div class="slider">
-        <!-- Add hero content here -->
-        <div class="hero-content">
-          <h1 class="hero-heading">Welcome to AD Enterprises</h1>
-          <p class="hero-subheading">Delivering Reliable Industrial Safety Solutions
-            Trusted by businesses for quality, durability, and performance.</p>
-          <a href="#products" class="btn-hero">Explore Products</a>
-        </div>
-        <div class="slide">
-          <img src="img/hero/Hero_1.jpg" alt="Industrial safety hero" width="1600" height="900" fetchpriority="high"
-            decoding="async" />
-        </div>
-        <div class="slide">
-          <img src="img/hero/Hero_2.jpg" alt="Safety equipment" width="1600" height="900" decoding="async"
-            fetchpriority="low" />
-        </div>
-        <div class="slide">
-          <img src="img/hero/Hero_3.jpg" alt="Workplace protection" width="1600" height="900" decoding="async"
-            fetchpriority="low" />
-        </div>
-        <div class="slide">
-          <img src="img/hero/Hero_4.jpg" alt="AD Enterprises" width="1600" height="900" decoding="async"
-            fetchpriority="low" />
-        </div>
-
-        <button class="slider__btn slider__btn--left"><svg class="home-icon">
-            <use xlink:href="img/svg/sprite.svg#icon-chevron-thin-left"></use>
-          </svg></button>
-        <button class="slider__btn slider__btn--right"><svg class="home-icon">
-            <use xlink:href="img/svg/sprite.svg#icon-chevron-thin-right"></use>
-          </svg></button>
-        <div class="dots"></div>
-      </div>
-
-    </section>
-
-    <section class="section-featured">
-      <div class="container">
-        <h2 class="heading-featured-in">As featured in</h2>
-        <div class="logos">
-          <img src="img/logo/FeaturedIn_logos/techcrunch.png" alt="Techcrunch logo" decoding="async"
-            fetchpriority="low" />
-          <img src="img/logo/FeaturedIn_logos/business-insider.png" alt="Business Insider" decoding="async"
-            fetchpriority="low" />
-          <img src="img/logo/FeaturedIn_logos/the-new-york-times.png" alt="New York Times" decoding="async"
-            fetchpriority="low" />
-          <img src="img/logo/FeaturedIn_logos/forbes.png" alt="Forbes" decoding="async" fetchpriority="low" />
-          <img src="img/logo/FeaturedIn_logos/usa-today.png" alt="USA today" decoding="async" fetchpriority="low" />
-        </div>
-      </div>
-    </section>
-
-    <section class="section-about" id="about">
-      <div class="section-about-container">
-        <figure class="section-about-img-fig hidden"><img src="img/hero/Hero_1-.jpg" alt="AD Enterprises facility"
-            class="section-about-img" id="about-img" width="384" height="384" decoding="async" fetchpriority="low" /></figure>
-        <div class="section-about-content hidden" id="about-content">
-          <h2 class="section-about-content--tag">Who we are</h2>
-          <p class="section-about-content--main">AD Enterprises, Mumbai, established in 2019, is a trusted Wholesaler,
-            Trader of high-quality Industrial Safety Equipment.</p>
-          <p class="section-about-content--sub">Our range includes Disposable Products, Face Protection, and Body
-            Protection items.
-            All products are made using premium materials and comply with industry standards.
-            They are known for being skin-friendly, durable, and of superior quality.</p>
-          <p class="section-about-content--sub">Supported by a modern infrastructure and a skilled workforce, we ensure
-            consistent excellence.
-            Our team works with precision and coordination to meet diverse customer needs.
-            We continuously train and upgrade our staff to stay aligned with the latest developments.
-            At AD Enterprises, we deliver reliable safety solutions at nominal prices.</p>
-          <!-- <a href="#">Read more</a> -->
-        </div>
-
-      </div>
-
-    </section>
-
-    <section class="section-product" id="products">
-      <div class=" heading-secondary-u">Our Product Category</div>
-
-      <div class=" sub-heading">Explore Our Wide Range of Safety Products
-        Designed to meet every industrial protection need.</div>
-
-      <div class="product-category-container">
-        <div class="product-category"><img src="img/product_category/Category-1.jpg" alt="Foot protection category"
-            class="product-category__img" width="320" height="320" decoding="async" fetchpriority="low">
-          <figcaption class="product-category__caption">Foot Protection<p class="product-category__caption__para">Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Modi illo voluptate ratione placeat. </p>
-          </figcaption>
-        </div>
-        <div class="product-category"><img src="img/product_category/Category-2.jpg" alt="Head protection category"
-            class="product-category__img" width="320" height="320" decoding="async" fetchpriority="low">
-          <figcaption class="product-category__caption">Head Protection<p class="product-category__caption__para">Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Modi illo voluptate ratione placeat. </p>
-          </figcaption>
-        </div>
-        <div class="product-category"><img src="img/product_category/Category-3.jpg" alt="Face protection category"
-            class="product-category__img" width="320" height="320" decoding="async" fetchpriority="low">
-          <figcaption class="product-category__caption">Face Protection<p class="product-category__caption__para">Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Modi illo voluptate ratione placeat.</p>
-          </figcaption>
-        </div>
-        <div class="product-category"><img src="img/product_category/Category-4.jpg" alt="Eye protection category"
-            class="product-category__img" width="320" height="320" decoding="async" fetchpriority="low">
-          <figcaption class="product-category__caption">Eye Protection<p class="product-category__caption__para">Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Modi illo voluptate ratione placeat. </p>
-          </figcaption>
-        </div>
-        <div class="product-category"><img src="img/product_category/Category-5.jpg" alt="Ear protection category"
-            class="product-category__img" width="320" height="320" decoding="async" fetchpriority="low">
-          <figcaption class="product-category__caption">Ear Protection<p class="product-category__caption__para">Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Modi illo voluptate ratione placeat. </p>
-          </figcaption>
-        </div>
-        <!-- <div class="product-category"><img src="img/product_category/Category-1.jpg" alt="category-1" class="product-category__img"><figcaption class="product-category__caption">Foot Protection<p class="product-category__caption__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo voluptate ratione placeat. Doloremque optio eum, labore quae, consequatur laboriosam magni aliquid obcaecati sint tempore sit nobis. Dignissimos, quam voluptatum!</p></figcaption></div>
-                  <div class="product-category"><img src="img/product_category/Category-2.jpg" alt="category-2" class="product-category__img"><figcaption class="product-category__caption">Head Protection<p class="product-category__caption__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo voluptate ratione placeat. Doloremque optio eum, labore quae, consequatur laboriosam magni aliquid obcaecati sint tempore sit nobis. Dignissimos, quam voluptatum!</p></figcaption></div>
-                  <div class="product-category"><img src="img/product_category/Category-3.jpg" alt="category-3" class="product-category__img"><figcaption class="product-category__caption">Face Protection<p class="product-category__caption__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo voluptate ratione placeat. Doloremque optio eum, labore quae, consequatur laboriosam magni aliquid obcaecati sint tempore sit nobis. Dignissimos, quam voluptatum!</p></figcaption></div>
-                  <div class="product-category"><img src="img/product_category/Category-4.jpg" alt="category-4" class="product-category__img"><figcaption class="product-category__caption">Eye Protection<p class="product-category__caption__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo voluptate ratione placeat. Doloremque optio eum, labore quae, consequatur laboriosam magni aliquid obcaecati sint tempore sit nobis. Dignissimos, quam voluptatum!</p></figcaption></div>
-                  <div class="product-category"><img src="img/product_category/Category-5.jpg" alt="category-5" class="product-category__img"><figcaption class="product-category__caption">Ear Protection<p class="product-category__caption__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo voluptate ratione placeat. Doloremque optio eum, labore quae, consequatur laboriosam magni aliquid obcaecati sint tempore sit nobis. Dignissimos, quam voluptatum!</p></figcaption></div> -->
-
-
-      </div>
-
-
-      <!-- <button class="slider__btn slider__btn--left"><svg class="home-icon"><use xlink:href="img/svg/sprite.svg#icon-chevron-thin-left"></use></svg></button>
-        <button class="slider__btn slider__btn--right"><svg class="home-icon"><use xlink:href="img/svg/sprite.svg#icon-chevron-thin-right"></use></svg></button> -->
-    </section>
-
-    <section class="section-services" id="services">
-      <div class="heading-secondary-u">
-        Our Services
-      </div>
-      <div class=" sub-heading">Delivering Expert Safety Solutions
-        Services designed to support your business with reliability.</div>
-      <div class="services-container">
-        <div class="services">
-          <figure class="services-img-fig"><img class="services-img" src="img/services/services-1.jpg"
-              alt="Safety consulting" width="640" height="480" decoding="async" fetchpriority="low"></figure>
-          <div class="services-details">
-            <h4 class="services-details-heading">Architecture</h4>
-            <p class="services-details-para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas voluptatum
-              nam ipsa alias deleniti dolor, possimus qui debitis officia neque facere accusantium tempore vero magnam
-              saepe enim accusamus aliquid inventore.</p>
+    <main>
+      <!-- HERO -->
+      <section class="section-hero" id="hero">
+        <div class="slider">
+          <div class="hero-content">
+            <h1 class="hero-heading">Welcome to AD Enterprises</h1>
+            <p class="hero-subheading">
+              Delivering Reliable Industrial Safety Solutions Trusted by
+              businesses for quality, durability, and performance.
+            </p>
+            <a href="#products" class="btn-hero">Explore Products</a>
           </div>
-        </div>
-        <div class="services">
-          <figure class="services-img-fig"><img class="services-img" src="img/services/services-2.jpg"
-              alt="Branding and safety programs" width="640" height="480" decoding="async" fetchpriority="low"></figure>
-          <div class="services-details">
-            <h4 class="services-details-heading">Branding</h4>
-            <p class="services-details-para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas voluptatum
-              nam ipsa alias deleniti dolor, possimus qui debitis officia neque facere accusantium tempore vero magnam
-              saepe enim accusamus aliquid inventore.</p>
+          <div class="slide">
+            <img
+              src="img/hero/Hero_1.jpg"
+              alt="Industrial safety hero"
+              width="1600"
+              height="900"
+              fetchpriority="high"
+              loading="eager"
+              decoding="async"
+            />
           </div>
-        </div>
-
-        <div class="services">
-          <figure class="services-img-fig"><img class="services-img" src="img/services/services-3.jpg"
-              alt="On-site safety support" width="640" height="480" decoding="async" fetchpriority="low"></figure>
-          <div class="services-details">
-            <h4 class="services-details-heading">Construction</h4>
-            <p class="services-details-para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas voluptatum
-              nam ipsa alias deleniti dolor, possimus qui debitis officia neque facere accusantium tempore vero magnam
-              saepe enim accusamus aliquid inventore.</p>
+          <div class="slide">
+            <img
+              src="img/hero/Hero_2.jpg"
+              alt="Safety equipment"
+              width="1600"
+              height="900"
+              decoding="async"
+              loading="eager"
+            />
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-testimonials" id="testimonials">
-      <div class="heading-secondary-u ">
-        Testimonials
-      </div>
-      <div class="testimonials-container">
-        <div class="testimonials-container-anumation">
-          <div class="testimonials">
-            <figure class="review">
-              <blockquote class="review__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi, totam,
-                itaque officia ex.
-              </blockquote>
-              <figcaption class="review__user">
-                <img src="img/user/user-1.jpg" alt="" class="review__photo" width="48" height="48" decoding="async" fetchpriority="low">
-                <div class="review__user-box">
-                  <p class="review__user-name">Nick Smith</p>
-                  <p class="review__user-date">Feb 23rd, 2017</p>
-                </div>
-                <div class="review__rating">7.8</div>
-              </figcaption>
-            </figure>
+          <div class="slide">
+            <img
+              src="img/hero/Hero_3.jpg"
+              alt="Workplace protection"
+              width="1600"
+              height="900"
+              decoding="async"
+              loading="eager"
+            />
           </div>
-          <div class="testimonials">
-            <figure class="review">
-              <blockquote class="review__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi, totam,
-                itaque officia ex.
-              </blockquote>
-              <figcaption class="review__user">
-                <img src="img/user/user-2.jpg" alt="" class="review__photo" width="48" height="48" decoding="async" fetchpriority="low">
-                <div class="review__user-box">
-                  <p class="review__user-name">Nick Smith</p>
-                  <p class="review__user-date">Feb 23rd, 2017</p>
-                </div>
-                <div class="review__rating">7.8</div>
-              </figcaption>
-            </figure>
+          <div class="slide">
+            <img
+              src="img/hero/Hero_4.jpg"
+              alt="AD Enterprises"
+              width="1600"
+              height="900"
+              decoding="async"
+              loading="eager"
+            />
           </div>
-          <div class="testimonials">
-            <figure class="review">
-              <blockquote class="review__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi, totam,
-                itaque officia ex.
-              </blockquote>
-              <figcaption class="review__user">
-                <img src="img/user/user-3.jpg" alt="" class="review__photo" width="48" height="48" decoding="async" fetchpriority="low">
-                <div class="review__user-box">
-                  <p class="review__user-name">Nick Smith</p>
-                  <p class="review__user-date">Feb 23rd, 2017</p>
-                </div>
-                <div class="review__rating">7.8</div>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="testimonials">
-            <figure class="review">
-              <blockquote class="review__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi, totam,
-                itaque officia ex.
-              </blockquote>
-              <figcaption class="review__user">
-                <img src="img/user/user-4.jpg" alt="" class="review__photo" width="48" height="48" decoding="async" fetchpriority="low">
-                <div class="review__user-box">
-                  <p class="review__user-name">Nick Smith</p>
-                  <p class="review__user-date">Feb 23rd, 2017</p>
-                </div>
-                <div class="review__rating">7.8</div>
-              </figcaption>
-            </figure>
-          </div>
-
-
-
-
-
-          <div class="testimonials" aria-hidden="true">
-            <figure class="review">
-              <blockquote class="review__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi, totam,
-                itaque officia ex.
-              </blockquote>
-              <figcaption class="review__user">
-                <img src="img/user/user-1.jpg" alt="" class="review__photo" width="48" height="48" decoding="async" fetchpriority="low">
-                <div class="review__user-box">
-                  <p class="review__user-name">Nick Smith</p>
-                  <p class="review__user-date">Feb 23rd, 2017</p>
-                </div>
-                <div class="review__rating">7.8</div>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="testimonials" aria-hidden="true">
-            <figure class="review">
-              <blockquote class="review__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi, totam,
-                itaque officia ex.
-              </blockquote>
-              <figcaption class="review__user">
-                <img src="img/user/user-2.jpg" alt="" class="review__photo" width="48" height="48" decoding="async" fetchpriority="low">
-                <div class="review__user-box">
-                  <p class="review__user-name">Nick Smith</p>
-                  <p class="review__user-date">Feb 23rd, 2017</p>
-                </div>
-                <div class="review__rating">7.8</div>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="testimonials" aria-hidden="true">
-            <figure class="review">
-              <blockquote class="review__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi, totam,
-                itaque officia ex.
-              </blockquote>
-              <figcaption class="review__user">
-                <img src="img/user/user-3.jpg" alt="" class="review__photo" width="48" height="48" decoding="async" fetchpriority="low">
-                <div class="review__user-box">
-                  <p class="review__user-name">Nick Smith</p>
-                  <p class="review__user-date">Feb 23rd, 2017</p>
-                </div>
-                <div class="review__rating">7.8</div>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="testimonials" aria-hidden="true">
-            <figure class="review">
-              <blockquote class="review__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi, totam,
-                itaque officia ex.
-              </blockquote>
-              <figcaption class="review__user">
-                <img src="img/user/user-4.jpg" alt="" class="review__photo" width="48" height="48" decoding="async" fetchpriority="low">
-                <div class="review__user-box">
-                  <p class="review__user-name">Nick Smith</p>
-                  <p class="review__user-date">Feb 23rd, 2017</p>
-                </div>
-                <div class="review__rating">7.8</div>
-              </figcaption>
-            </figure>
-          </div>
-
-
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="footer-connect" id="contact">
-      <p class="footer-connect-promo">Last chance to get our discount!</p>
-      <div class="footer-connect-form">
-        <form class="footer-form footer-form--inline" action="#" method="get">
-          <input type="email" name="email" id="footer-email" autocomplete="email"
-            placeholder="Enter your email…" class="footer-connect-form-input" />
-          <button class="footer-connect-form-submit" type="submit">Subscribe
-            <svg class="nav-icon-sub" aria-hidden="true">
-              <use xlink:href="img/svg/sprite.svg#icon-arrow-long-right"></use>
+          <button class="slider__btn slider__btn--left">
+            <svg class="home-icon">
+              <use xlink:href="img/svg/sprite.svg#icon-chevron-thin-left"></use>
             </svg>
           </button>
-        </form>
-      </div>
-      <div class="footer-connect-links">
-        <span class="footer-connect-links-social">On social networks</span>
-        <span class="footer-connect-links-icons">
-          <svg class="nav-icon-social" aria-hidden="true">
-            <use xlink:href="img/svg/sprite.svg#icon-facebook"></use>
-          </svg>
-          <svg class="nav-icon-social" aria-hidden="true">
-            <use xlink:href="img/svg/sprite.svg#icon-twitter"></use>
-          </svg>
-          <svg class="nav-icon-social" aria-hidden="true">
-            <use xlink:href="img/svg/sprite.svg#icon-linkedin"></use>
-          </svg>
-          <svg class="nav-icon-social" aria-hidden="true">
-            <use xlink:href="img/svg/sprite.svg#icon-instagram1"></use>
-          </svg>
-          <svg class="nav-icon-social" aria-hidden="true">
-            <use xlink:href="img/svg/sprite.svg#icon-pinterest"></use>
-          </svg>
-        </span>
-      </div>
-    </div>
+          <button class="slider__btn slider__btn--right">
+            <svg class="home-icon">
+              <use
+                xlink:href="img/svg/sprite.svg#icon-chevron-thin-right"
+              ></use>
+            </svg>
+          </button>
+          <div class="dots"></div>
+        </div>
+      </section>
 
-    <div class="footer-main">
-      <div class="footer-main-grid">
-        <div class="footer__brand-col">
-          <a href="index.html" class="footer__brand">
-            <img class="footer-logo" src="img/logo/Logo_AD.png" alt="AD Enterprises" width="160" height="48"
-              decoding="async" fetchpriority="low" />
-          </a>
-          <p class="footer__intro">AD Enterprises supplies trusted industrial safety equipment across Mumbai and
-            beyond—quality gear for teams who need reliable protection every day.</p>
+      <!-- FEATURED -->
+      <section class="section-featured">
+        <div class="container">
+          <h2 class="heading-featured-in">As featured in</h2>
+          <div class="logos">
+            <img
+              src="img/logo/FeaturedIn_logos/techcrunch.png"
+              alt="Techcrunch"
+              decoding="async"
+            />
+            <img
+              src="img/logo/FeaturedIn_logos/business-insider.png"
+              alt="Business Insider"
+              decoding="async"
+            />
+            <img
+              src="img/logo/FeaturedIn_logos/the-new-york-times.png"
+              alt="New York Times"
+              decoding="async"
+            />
+            <img
+              src="img/logo/FeaturedIn_logos/forbes.png"
+              alt="Forbes"
+              decoding="async"
+            />
+            <img
+              src="img/logo/FeaturedIn_logos/usa-today.png"
+              alt="USA Today"
+              decoding="async"
+            />
+          </div>
         </div>
-        <div class="footer__col">
-          <h3 class="footer__heading">Categories</h3>
-          <ul class="footer-nav">
-            <li><a class="footer-link" href="products.html">Foot protection</a></li>
-            <li><a class="footer-link" href="products.html">Head protection</a></li>
-            <li><a class="footer-link" href="products.html">Face protection</a></li>
-            <li><a class="footer-link" href="products.html">Eye &amp; ear protection</a></li>
-          </ul>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section-about" id="about">
+        <div class="section-about-container">
+          <figure class="section-about-img-fig hidden">
+            <img
+              src="img/hero/Hero_1-.jpg"
+              alt="AD Enterprises facility"
+              class="section-about-img"
+              id="about-img"
+              width="384"
+              height="384"
+              decoding="async"
+            />
+          </figure>
+          <div class="section-about-content hidden" id="about-content">
+            <h2 class="section-about-content--tag">Who we are</h2>
+            <p class="section-about-content--main">
+              AD Enterprises, Mumbai, established in 2019, is a trusted
+              Wholesaler, Trader of high-quality Industrial Safety Equipment.
+            </p>
+            <p class="section-about-content--sub">
+              Our range includes Disposable Products, Face Protection, and Body
+              Protection items. All products are made using premium materials
+              and comply with industry standards. They are known for being
+              skin-friendly, durable, and of superior quality.
+            </p>
+            <p class="section-about-content--sub">
+              Supported by a modern infrastructure and a skilled workforce, we
+              ensure consistent excellence. Our team works with precision and
+              coordination to meet diverse customer needs. We continuously train
+              and upgrade our staff to stay aligned with the latest
+              developments. At AD Enterprises, we deliver reliable safety
+              solutions at nominal prices.
+            </p>
+          </div>
         </div>
-        <div class="footer__col">
-          <h3 class="footer__heading">Customer</h3>
-          <ul class="footer-nav">
-            <li><a class="footer-link" href="#">Help and support</a></li>
-            <li><a class="footer-link" href="#">Shipping and delivery</a></li>
-            <li><a class="footer-link" href="#">Payment methods</a></li>
-            <li><a class="footer-link" href="#">Terms and conditions</a></li>
-            <li><a class="footer-link" href="#">Privacy policy</a></li>
-          </ul>
+      </section>
+
+      <!-- PRODUCTS -->
+      <section class="section-product" id="products">
+        <div class="heading-secondary-u">Our Product Category</div>
+        <div class="sub-heading">
+          Explore Our Wide Range of Safety Products Designed to meet every
+          industrial protection need.
         </div>
-        <div class="footer__col">
-          <h3 class="footer__heading">Company</h3>
-          <ul class="footer-nav">
-            <li><a class="footer-link" href="about.html">About company</a></li>
-            <li><a class="footer-link" href="index.html#about">Our story</a></li>
-            <li><a class="footer-link" href="products.html">Our services</a></li>
-            <li><a class="footer-link" href="#contact">Contact us</a></li>
-          </ul>
+        <div class="product-category-container"></div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="section-services" id="services">
+        <div class="heading-secondary-u">Our Services</div>
+        <div class="sub-heading">
+          Delivering Expert Safety Solutions Services designed to support your
+          business with reliability.
         </div>
-        <section class="footer__gallery" aria-labelledby="footer-gallery-heading">
-        <h3 class="footer__heading footer__heading--gallery" id="footer-gallery-heading">Follow us on Instagram</h3>
-        <div class="footer-main-img-grid">
-          <div class="image-container">
-            <img src="img/product_category/Category-1.jpg" alt="Safety footwear" class="footer-main-img" width="200"
-              height="200" loading="lazy" decoding="async" fetchpriority="low" />
-            <div class="overlay" aria-hidden="true">
-              <svg class="nav-icon-social-overlay">
-                <use xlink:href="img/svg/sprite.svg#icon-instagram1"></use>
-              </svg>
+        <div class="services-container">
+          <div class="services">
+            <figure class="services-img-fig">
+              <img
+                class="services-img"
+                src="img/services/services-1.jpg"
+                alt="Safety consulting"
+                width="640"
+                height="480"
+                decoding="async"
+              />
+            </figure>
+            <div class="services-details">
+              <h4 class="services-details-heading">Architecture</h4>
+              <p class="services-details-para">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
+                voluptatum nam ipsa alias deleniti dolor, possimus qui debitis
+                officia neque facere accusantium tempore vero magnam saepe enim
+                accusamus aliquid inventore.
+              </p>
             </div>
           </div>
-          <div class="image-container">
-            <img src="img/product_category/Category-2.jpg" alt="Head protection gear" class="footer-main-img"
-              width="200" height="200" loading="lazy" decoding="async" fetchpriority="low" />
-            <div class="overlay" aria-hidden="true">
-              <svg class="nav-icon-social-overlay">
-                <use xlink:href="img/svg/sprite.svg#icon-instagram1"></use>
-              </svg>
+          <div class="services">
+            <figure class="services-img-fig">
+              <img
+                class="services-img"
+                src="img/services/services-2.jpg"
+                alt="Branding and safety programs"
+                width="640"
+                height="480"
+                decoding="async"
+              />
+            </figure>
+            <div class="services-details">
+              <h4 class="services-details-heading">Branding</h4>
+              <p class="services-details-para">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
+                voluptatum nam ipsa alias deleniti dolor, possimus qui debitis
+                officia neque facere accusantium tempore vero magnam saepe enim
+                accusamus aliquid inventore.
+              </p>
             </div>
           </div>
-          <div class="image-container">
-            <img src="img/product_category/Category-3.jpg" alt="Face protection" class="footer-main-img" width="200"
-              height="200" loading="lazy" decoding="async" fetchpriority="low" />
-            <div class="overlay" aria-hidden="true">
-              <svg class="nav-icon-social-overlay">
-                <use xlink:href="img/svg/sprite.svg#icon-instagram1"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="img/product_category/Category-4.jpg" alt="Eye protection" class="footer-main-img" width="200"
-              height="200" loading="lazy" decoding="async" fetchpriority="low" />
-            <div class="overlay" aria-hidden="true">
-              <svg class="nav-icon-social-overlay">
-                <use xlink:href="img/svg/sprite.svg#icon-instagram1"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="img/product_category/Category-5.jpg" alt="Ear protection" class="footer-main-img" width="200"
-              height="200" loading="lazy" decoding="async" fetchpriority="low" />
-            <div class="overlay" aria-hidden="true">
-              <svg class="nav-icon-social-overlay">
-                <use xlink:href="img/svg/sprite.svg#icon-instagram1"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="img/services/services-1.jpg" alt="Industrial safety" class="footer-main-img" width="200"
-              height="200" loading="lazy" decoding="async" fetchpriority="low" />
-            <div class="overlay" aria-hidden="true">
-              <svg class="nav-icon-social-overlay">
-                <use xlink:href="img/svg/sprite.svg#icon-instagram1"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="img/services/services-2.jpg" alt="Safety solutions" class="footer-main-img" width="200"
-              height="200" loading="lazy" decoding="async" fetchpriority="low" />
-            <div class="overlay" aria-hidden="true">
-              <svg class="nav-icon-social-overlay">
-                <use xlink:href="img/svg/sprite.svg#icon-instagram1"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="img/services/services-3.jpg" alt="Workplace safety" class="footer-main-img" width="200"
-              height="200" loading="lazy" decoding="async" fetchpriority="low" />
-            <div class="overlay" aria-hidden="true">
-              <svg class="nav-icon-social-overlay">
-                <use xlink:href="img/svg/sprite.svg#icon-instagram1"></use>
-              </svg>
+          <div class="services">
+            <figure class="services-img-fig">
+              <img
+                class="services-img"
+                src="img/services/services-3.jpg"
+                alt="On-site safety support"
+                width="640"
+                height="480"
+                decoding="async"
+              />
+            </figure>
+            <div class="services-details">
+              <h4 class="services-details-heading">Construction</h4>
+              <p class="services-details-para">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
+                voluptatum nam ipsa alias deleniti dolor, possimus qui debitis
+                officia neque facere accusantium tempore vero magnam saepe enim
+                accusamus aliquid inventore.
+              </p>
             </div>
           </div>
         </div>
       </section>
-      </div>
-    </div>
 
-    <div class="footer-end">
-      <p class="footer-end-copyright">© 2026 AD Enterprises</p>
-      <div class="footer-end-cards">
-        <div>
-          <img src="img/cards/american-express-card.png" alt="American Express" class="footer-end-img" width="56"
-            height="36" loading="lazy" decoding="async" fetchpriority="low" />
+      <!-- TESTIMONIALS -->
+      <section class="section-testimonials" id="testimonials">
+        <div class="heading-secondary-u">Testimonials</div>
+        <div class="testimonials-container">
+          <div class="testimonials-container-anumation"></div>
         </div>
-        <div>
-          <img src="img/cards/master-card.png" alt="Mastercard" class="footer-end-img" width="56" height="36"
-            loading="lazy" decoding="async" fetchpriority="low" />
+      </section>
+    </main>
+
+    <footer class="footer">
+      <!-- NEWSLETTER + SOCIAL -->
+      <div class="footer-connect" id="contact">
+        <p class="footer-connect-promo">Last chance to get our discount!</p>
+        <div class="footer-connect-form">
+          <form class="footer-form footer-form--inline" action="#" method="get">
+            <input
+              type="email"
+              name="email"
+              id="footer-email"
+              autocomplete="email"
+              placeholder="Enter your email…"
+              class="footer-connect-form-input"
+            />
+            <button class="footer-connect-form-submit" type="submit">
+              Subscribe
+              <svg class="nav-icon-sub" aria-hidden="true">
+                <use
+                  xlink:href="img/svg/sprite.svg#icon-arrow-long-right"
+                ></use>
+              </svg>
+            </button>
+          </form>
         </div>
-        <div>
-          <img src="img/cards/paypal.jpg" alt="PayPal" class="footer-end-img" width="56" height="36" loading="lazy"
-            decoding="async" fetchpriority="low" />
-        </div>
-        <div>
-          <img src="img/cards/Visa-Card.png" alt="Visa" class="footer-end-img" width="56" height="36" loading="lazy"
-            decoding="async" fetchpriority="low" />
+        <div class="footer-connect-links">
+          <span class="footer-connect-links-social">On social networks</span>
+          <span class="footer-connect-links-icons">
+            <svg class="nav-icon-social" aria-hidden="true">
+              <use xlink:href="img/svg/sprite.svg#icon-facebook"></use>
+            </svg>
+            <svg class="nav-icon-social" aria-hidden="true">
+              <use xlink:href="img/svg/sprite.svg#icon-twitter"></use>
+            </svg>
+            <svg class="nav-icon-social" aria-hidden="true">
+              <use xlink:href="img/svg/sprite.svg#icon-linkedin"></use>
+            </svg>
+            <svg class="nav-icon-social" aria-hidden="true">
+              <use xlink:href="img/svg/sprite.svg#icon-instagram1"></use>
+            </svg>
+            <svg class="nav-icon-social" aria-hidden="true">
+              <use xlink:href="img/svg/sprite.svg#icon-pinterest"></use>
+            </svg>
+          </span>
         </div>
       </div>
-      <button type="button" class="footer-scroll-top" aria-label="Scroll to top">
-        <span class="footer-scroll-top__icon" aria-hidden="true">↑</span>
-        <span class="footer-scroll-top__label">Scroll up</span>
-      </button>
-    </div>
-  </footer>
-  <script src="script.js"></script>
+
+      <!-- FOOTER MAIN -->
+      <div class="footer-main">
+        <div class="footer-main-grid">
+          <div class="footer__brand-col">
+            <a href="index.html" class="footer__brand">
+              <img
+                class="footer-logo"
+                src="img/logo/Logo_AD.png"
+                alt="AD Enterprises"
+                width="160"
+                height="48"
+                decoding="async"
+              />
+            </a>
+            <p class="footer__intro">
+              AD Enterprises supplies trusted industrial safety equipment across
+              Mumbai and beyond—quality gear for teams who need reliable
+              protection every day.
+            </p>
+          </div>
+
+          <div class="footer__col">
+            <h3 class="footer__heading">Categories</h3>
+            <ul class="footer-nav">
+              <li>
+                <a class="footer-link" href="products.html">Foot protection</a>
+              </li>
+              <li>
+                <a class="footer-link" href="products.html">Head protection</a>
+              </li>
+              <li>
+                <a class="footer-link" href="products.html">Face protection</a>
+              </li>
+              <li>
+                <a class="footer-link" href="products.html"
+                  >Eye &amp; ear protection</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h3 class="footer__heading">Customer</h3>
+            <ul class="footer-nav">
+              <li><a class="footer-link" href="#">Help and support</a></li>
+              <li><a class="footer-link" href="#">Shipping and delivery</a></li>
+              <li><a class="footer-link" href="#">Payment methods</a></li>
+              <li><a class="footer-link" href="#">Terms and conditions</a></li>
+              <li><a class="footer-link" href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h3 class="footer__heading">Company</h3>
+            <ul class="footer-nav">
+              <li>
+                <a class="footer-link" href="about.html">About company</a>
+              </li>
+              <li>
+                <a class="footer-link" href="index.html#about">Our story</a>
+              </li>
+              <li>
+                <a class="footer-link" href="products.html">Our services</a>
+              </li>
+              <li><a class="footer-link" href="#contact">Contact us</a></li>
+            </ul>
+          </div>
+
+          <section
+            class="footer__gallery"
+            aria-labelledby="footer-gallery-heading"
+          >
+            <h3
+              class="footer__heading footer__heading--gallery"
+              id="footer-gallery-heading"
+            >
+              Follow us on Instagram
+            </h3>
+            <div class="footer-main-img-grid" id="footer-gallery"></div>
+          </section>
+        </div>
+      </div>
+
+      <!-- FOOTER END -->
+      <div class="footer-end">
+        <p class="footer-end-copyright">© 2026 AD Enterprises</p>
+        <div class="footer-end-cards">
+          <div>
+            <img
+              src="img/cards/american-express-card.png"
+              alt="American Express"
+              class="footer-end-img"
+              width="56"
+              height="36"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div>
+            <img
+              src="img/cards/master-card.png"
+              alt="Mastercard"
+              class="footer-end-img"
+              width="56"
+              height="36"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div>
+            <img
+              src="img/cards/paypal.jpg"
+              alt="PayPal"
+              class="footer-end-img"
+              width="56"
+              height="36"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div>
+            <img
+              src="img/cards/Visa-Card.png"
+              alt="Visa"
+              class="footer-end-img"
+              width="56"
+              height="36"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+        <button
+          type="button"
+          class="footer-scroll-top"
+          aria-label="Scroll to top"
+        >
+          <span class="footer-scroll-top__icon" aria-hidden="true">↑</span>
+          <span class="footer-scroll-top__label">Scroll up</span>
+        </button>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
-
 </html>
