@@ -1,0 +1,130 @@
+/********************/
+/* DARK MODE OVERRIDES */
+/********************/
+
+.dark-mode {
+  body {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(16, 29, 44, 0.94),
+        rgba(10, 18, 28, 0.97)
+      ),
+      url("/img/logo/Logo_AD.png");
+    color: #cfd6dd;
+  }
+
+  .navigation {
+    color: #f0f0f0;
+  }
+
+  .navigation.nav-solid {
+    background-color: rgba(16, 22, 30, 0.97);
+    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.3);
+  }
+
+  .main_nav-link:link,
+  .main_nav-link:visited {
+    color: #e5e9ee;
+  }
+
+  .nav-icon {
+    fill: #e5e9ee;
+  }
+
+  .main_nav {
+    background-color: rgba(16, 22, 30, 0.97);
+  }
+
+  .icon-mobile-nav {
+    color: #e5e9ee;
+  }
+
+  .icon-mobile-nav[name="close-outline"] {
+    color: #e5e9ee;
+  }
+
+  .logo {
+    filter: brightness(0) invert(1);
+  }
+
+  .heading-secondary-u {
+    color: #f4f4f4;
+  }
+
+  .sub-heading {
+    color: #a9b1ba;
+  }
+
+  .heading-featured-in {
+    color: #8a929b;
+  }
+
+  .logos img {
+    filter: brightness(0) invert(1);
+    opacity: 0.35;
+  }
+
+  .section-about-content {
+    background: linear-gradient(
+      135deg,
+      rgba(30, 38, 48, 0.6) 0%,
+      rgba(20, 27, 36, 0.4) 100%
+    );
+    border-color: rgba(255, 255, 255, 0.08);
+    color: #d7dce1;
+  }
+
+  .section-about-content--tag {
+    color: #ff8b6b;
+  }
+
+  .section-about-content--sub {
+    color: #c3cad1;
+  }
+
+  .services {
+    background-color: #1b232c;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .services-details-heading {
+    color: #f0f0f0;
+  }
+
+  .services-details-para {
+    color: #a9b1ba;
+  }
+
+  .section-product-heading {
+    color: #f0f0f0;
+  }
+
+  .review {
+    background-color: #1b232c;
+    color: #cfd6dd;
+  }
+
+  .review__user-name {
+    color: #f0f0f0;
+  }
+
+  .review__user-date {
+    color: #8a929b;
+  }
+
+  .footer-connect-form-input {
+    background-color: #1b232c;
+  }
+}
+
+html.dark-mode {
+  scrollbar-color: rgba(220, 71, 39, 0.45) transparent;
+}
+
+html.dark-mode::-webkit-scrollbar-thumb {
+  background-color: rgba(220, 71, 39, 0.45);
+
+  &:hover {
+    background-color: rgba(220, 71, 39, 0.7);
+  }
+}

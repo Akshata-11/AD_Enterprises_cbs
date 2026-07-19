@@ -161,16 +161,18 @@
       text-align: center;
     }
 
-    &-form {
+    .footer-connect-form {
       flex-direction: column;
       align-items: stretch;
       gap: 1.2rem;
-      flex: 1 1 auto;
+      flex: 0 0 auto;
       width: 100%;
       max-width: 48rem;
       margin: 0 auto;
       padding-right: 0;
+    }
 
+    &-form {
       &-input {
         width: 100%;
         max-width: none;

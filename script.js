@@ -1,3 +1,24 @@
+// ─── DARK MODE ───────────────────────────────────────────────────────────────
+
+(function initThemeToggle() {
+  const root = document.documentElement;
+  const btnTheme = document.querySelector(".btn-theme-toggle");
+  const STORAGE_KEY = "ad-theme";
+
+  const stored = localStorage.getItem(STORAGE_KEY);
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const isDark = stored ? stored === "dark" : prefersDark;
+
+  root.classList.toggle("dark-mode", isDark);
+
+  if (btnTheme) {
+    btnTheme.addEventListener("click", () => {
+      const nowDark = root.classList.toggle("dark-mode");
+      localStorage.setItem(STORAGE_KEY, nowDark ? "dark" : "light");
+    });
+  }
+})();
+
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
 const categoriesData = [

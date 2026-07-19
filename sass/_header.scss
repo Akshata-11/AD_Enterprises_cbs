@@ -132,3 +132,44 @@
 .icon-mobile-nav[name="close-outline"] {
   display: none;
 }
+
+/*THEME TOGGLE*/
+
+.btn-theme-toggle {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem;
+  margin-right: 0.8rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: rgba(40, 154, 201, 0.15);
+  }
+}
+
+.icon-theme-toggle {
+  height: 2.2rem;
+  width: 2.2rem;
+  color: #07171e;
+
+  &--sun {
+    display: none;
+  }
+}
+
+.dark-mode .icon-theme-toggle {
+  color: #f0f0f0;
+
+  &--moon {
+    display: none;
+  }
+
+  &--sun {
+    display: block;
+  }
+}
