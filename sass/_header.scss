@@ -6,7 +6,7 @@
   padding: 0 4.8rem;
   color: $color-secondary;
   position: relative;
-  background-color: #fff;
+  background-color: transparent;
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0);
   transition:
     box-shadow 0.4s ease,
@@ -16,13 +16,18 @@
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
   height: 7rem;
   padding-top: 0;
   padding-bottom: 0;
-  background-color: rgba(255, 255, 255, 0.97);
   z-index: 999;
-  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+.navigation.nav-solid {
+  background-color: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.06);
 }
 
 .logo-link {
@@ -59,13 +64,7 @@
     font-size: 1.4rem;
     display: flex;
     align-items: center;
-    transition:
-      color 0.3s ease,
-      font-weight 0s;
-  }
-
-  &-link:active,
-  &-link:hover {
+    transition: color 0.3s ease;
   }
 }
 
@@ -105,15 +104,11 @@
   border-radius: 8px;
   border: 0.01rem solid transparent;
   transition:
-    background-color 0.3s ease,
-    border-color 0.3s ease,
-    transform 0.3s ease;
+    background-color 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s ease;
 
   &:not(:last-child):hover {
-    // border-color: #054965;
-    background-color: rgba(166, 211, 230, 0.281);
-    // transform: scale(0.95);
-    // transform: translateY(-0.5px);
+    background-color: rgba(40, 154, 201, 0.15);
   }
 }
 

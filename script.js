@@ -126,6 +126,38 @@ if (btnNavEl && headerEl) {
   });
 }
 
+// ─── TRANSPARENT HEADER ON HERO, SOLID ON SCROLL ────────────────────────────
+
+if (headerEl) {
+  if (document.getElementById("hero")) {
+    const SCROLL_THRESHOLD = 60;
+    let navTicking = false;
+
+    const updateNavSolidState = () => {
+      navTicking = false;
+      headerEl.classList.toggle(
+        "nav-solid",
+        window.scrollY > SCROLL_THRESHOLD,
+      );
+    };
+
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (!navTicking) {
+          navTicking = true;
+          requestAnimationFrame(updateNavSolidState);
+        }
+      },
+      { passive: true },
+    );
+
+    updateNavSolidState();
+  } else {
+    headerEl.classList.add("nav-solid");
+  }
+}
+
 // ─── ACTIVE NAV HIGHLIGHT (landing page) ────────────────────────────────────
 
 (function initLandingSectionNav() {
@@ -182,7 +214,8 @@ if (slides.length && btnLeft && btnRight && dotContainer) {
   let curSlide = 0;
   const maxSlide = slides.length;
   let sliderInterval;
-  const AUTO_MS = 5500;
+  const AUTO_MS = 6000;
+  let isTransitioning = false;
 
   // Dots
   slides.forEach((_, i) => {
@@ -202,17 +235,25 @@ if (slides.length && btnLeft && btnRight && dotContainer) {
   };
 
   const goToSlide = (slide) => {
-    slides.forEach(
-      (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`),
-    );
+    isTransitioning = true;
+    slides.forEach((s, i) => {
+      s.style.transform = `translateX(${100 * (i - slide)}%)`;
+    });
+
+    setTimeout(() => {
+      isTransitioning = false;
+    }, 900);
   };
 
   const nextSlide = () => {
+    if (isTransitioning) return;
     curSlide = (curSlide + 1) % maxSlide;
     goToSlide(curSlide);
     activateDot(curSlide);
   };
+
   const prevSlide = () => {
+    if (isTransitioning) return;
     curSlide = (curSlide - 1 + maxSlide) % maxSlide;
     goToSlide(curSlide);
     activateDot(curSlide);
@@ -221,24 +262,29 @@ if (slides.length && btnLeft && btnRight && dotContainer) {
   const startAutoPlay = () => {
     sliderInterval = setInterval(nextSlide, AUTO_MS);
   };
+
   const resetAutoPlay = () => {
     clearInterval(sliderInterval);
     startAutoPlay();
   };
 
+  // Initialize
   goToSlide(0);
   activateDot(0);
   startAutoPlay();
 
+  // Button controls
   btnRight.addEventListener("click", () => {
     nextSlide();
     resetAutoPlay();
   });
+
   btnLeft.addEventListener("click", () => {
     prevSlide();
     resetAutoPlay();
   });
 
+  // Keyboard navigation
   document.addEventListener("keydown", (e) => {
     const t = e.target;
     if (
@@ -248,6 +294,7 @@ if (slides.length && btnLeft && btnRight && dotContainer) {
       t?.isContentEditable
     )
       return;
+
     if (e.key === "ArrowLeft") {
       prevSlide();
       resetAutoPlay();
@@ -258,8 +305,9 @@ if (slides.length && btnLeft && btnRight && dotContainer) {
     }
   });
 
+  // Dot navigation
   dotContainer.addEventListener("click", (e) => {
-    if (e.target.classList.contains("dots__dot")) {
+    if (e.target.classList.contains("dots__dot") && !isTransitioning) {
       curSlide = Number(e.target.dataset.slide);
       goToSlide(curSlide);
       activateDot(curSlide);
@@ -267,12 +315,40 @@ if (slides.length && btnLeft && btnRight && dotContainer) {
     }
   });
 
+  // Pause on hover
   const sliderContainer = document.querySelector(".slider");
   if (sliderContainer) {
-    sliderContainer.addEventListener("mouseenter", () =>
-      clearInterval(sliderInterval),
-    );
+    sliderContainer.addEventListener("mouseenter", () => {
+      clearInterval(sliderInterval);
+    });
     sliderContainer.addEventListener("mouseleave", startAutoPlay);
+  }
+
+  // Touch support for mobile
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  sliderContainer?.addEventListener("touchstart", (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  sliderContainer?.addEventListener("touchend", (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    const swipeThreshold = 50;
+    const diff = touchStartX - touchEndX;
+
+    if (Math.abs(diff) > swipeThreshold && !isTransitioning) {
+      if (diff > 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+      resetAutoPlay();
+    }
   }
 }
 

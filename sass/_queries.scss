@@ -14,6 +14,10 @@
   .slide {
     height: min(90vh, 74rem);
   }
+
+  .section-about-content {
+    padding: 2rem 3rem;
+  }
 }
 
 /********************/
@@ -89,7 +93,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    right: 0;
     height: 100dvh;
     transform: translateX(100%);
     display: flex;
@@ -101,6 +105,7 @@
     pointer-events: none;
     visibility: hidden;
     z-index: 1000;
+    overflow: hidden;
   }
 
   .nav-open .main_nav {
@@ -227,6 +232,42 @@
 }
 
 /********************/
+/*BELOW 768PX (Tablets)*/
+/********************/
+
+@media (max-width: 48em) {
+  .product-category-container {
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+
+  .product-category {
+    max-width: 16rem;
+  }
+
+  .section-about-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .section-about-content {
+    padding: 2rem;
+    margin: 0 1rem;
+    max-width: 100%;
+  }
+
+  .services-container {
+    gap: clamp(2rem, 4vw, 6rem);
+    padding: 0 2.4rem;
+  }
+
+  .services {
+    max-width: 28rem;
+    margin: 0 auto;
+  }
+}
+
+/********************/
 /*BELOW 704PX (Phones)*/
 /********************/
 
@@ -253,18 +294,18 @@
   }
 
   .hero-heading {
-    font-size: clamp(2.8rem, 8vw, 4rem);
-    margin-bottom: 2.4rem;
+    font-size: clamp(2.2rem, 8vw, 3.5rem);
+    margin-bottom: 2rem;
   }
 
   .hero-subheading {
-    font-size: 1.5rem;
-    margin-bottom: 3rem;
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+    margin-bottom: 2rem;
   }
 
   .btn-hero {
     padding: 1.2rem 2.4rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .slider__btn--left {
@@ -277,10 +318,41 @@
     transform: translate(0, -50%);
   }
 
+  .section-about-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
   .section-about-content {
-    padding: 2rem 2rem;
-    margin-left: 0;
-    margin-right: 0;
+    padding: 1.5rem;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .product-category-container {
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .product-category {
+    max-width: 15rem;
+  }
+
+  .services-container {
+    gap: 3.2rem;
+    padding: 0 2.4rem;
+  }
+
+  .services {
+    max-width: min(44rem, 100%);
+    width: 100%;
+    min-height: 38rem;
+    margin: 0 auto;
+  }
+
+  .services-img {
+    height: 20rem;
   }
 
   .footer-nav {

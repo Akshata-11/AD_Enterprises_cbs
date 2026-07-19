@@ -53,6 +53,36 @@ Paragraph Default : 1.6
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth scrolling for links */
+a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+main {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 html {
@@ -60,12 +90,49 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  scroll-padding-top: 8rem;
+  scroll-padding-top: 7rem;
+  scroll-padding-bottom: 2rem;
+  width: 100%;
+  max-width: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(5, 73, 101, 0.35) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(5, 73, 101, 0.35);
+  border-radius: 999px;
+
+  &:hover {
+    background-color: rgba(5, 73, 101, 0.55);
+  }
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  * {
+    animation: none !important;
+    transition: none !important;
   }
 }
 
@@ -74,6 +141,11 @@ body {
   color: $color-grey-dark-2;
   font-weight: 600;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   background-image: url("/img/logo/Logo_AD.png");
   background-image: linear-gradient(
       to right bottom,
@@ -84,8 +156,6 @@ body {
   background-position: center;
   background-size: 220rem;
   background-repeat: no-repeat;
-  // overflow-x: hidden;
-  // z-index: -1111;
 }
 
 .container {
@@ -93,6 +163,8 @@ body {
   max-width: 120rem;
   margin: 0 auto;
   padding: 0 3.2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .grid {
@@ -120,24 +192,22 @@ body {
 }
 
 .heading-secondary-u {
-  display: flex;
-  min-height: auto;
-  width: max-content;
-  max-width: 100%;
-  padding: 1rem;
+  display: block;
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto 3.2rem;
+  padding: 0 1.6rem;
   box-sizing: border-box;
-  // background: linear-gradient(to right bottom, #e3db80, #eedc1cb4);
-  // background: linear-gradient(to right bottom, #efb671, #dc4727);
-  color: #dc4727;
-  // linear-gradient(to right bottom, #efb671, #dc4727);
-  font-size: 1.8rem;
-  font-weight: 100;
-  align-items: center;
-  margin-bottom: 2.4rem;
-  justify-content: center;
   text-align: center;
-  // text-transform: uppercase;
-  font-family: "Momo Trust Display", sans-serif;
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  word-break: break-word;
+  position: relative;
+  color: #000;
 }
 
 .section-about {
@@ -145,7 +215,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  // background-color: #aaa;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .section-product {
@@ -154,29 +227,32 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .section-services {
   display: flex;
   flex-direction: column;
-
   align-items: center;
   padding: 12rem 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
-.section-testimonials {
-  // margin: 8rem auto;
-  // width: 92%;
 
-  // width: 1200px; // Fixed width
-  // max-width: 92%; // Responsive fallback
-  // margin: 0 auto;
+.section-testimonials {
   display: flex;
   flex-direction: column;
-
   align-items: center;
   padding: 16rem 0;
-  // margin-bottom: 12rem;
-  // justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .sub-heading {
